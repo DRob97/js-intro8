@@ -1,0 +1,87 @@
+
+
+09-30-2023 JS Data Types & Operators
+
+RECAP:
+Output statement: console.log()
+
+Escape sequences: special characters allows us to insert tab space or new line or backslash and quotes to our texts.
+\'
+\"
+\n 
+\t 
+\\
+
+
+Variables:
+var: used to be the only way to store information-data (Before 2015 - ES6)
+const: cannot be reassigned and must initialized with a value
+let: can be declared, initialized and reassigned
+
+NOTE: Trying to reassign a value into a const variable will cause TypeError: Assignment to constant variable.
+NOTE: const variables cannot be declared, so whenever you use const, you have to give an initial value.
+
+const name; // Compiler error - syntax error 
+const name = 'Alex'; // This is the proper way of using const
+
+
+
+DATA TYPES:
+Data types in JS are divided into 2 categories:
+    1. Primitives: these are not advanced and used to store only a piece of information
+        1. string: stores text data in single or double quotes like 'John' or "Chicago"
+        2. number: stores decimal and whole numbers like 5, 4.5
+        3. boolean: stores either true or false or an expression that evaluates to true or false 
+        4. undefined: declared but initialized variable
+        5. null: pointing to no data 
+        6. bigint: used if the number is large and is not safe to store in regular number 
+        7. symbol 
+
+    2. References or objects: these are more complex and storing more memory compared to primitives 
+        dates, arrays, objects, collections, etc.
+
+
+numbers: 
+    whole numbers: 1, 2, 100, 1000000
+    decimal numbers - floating numbers: 5.99, 4.59, 3.5
+
+texts: Alex, Chicago, A, c
+
+dates: 11/11/1990, 09/30/2023
+
+Collections: arrays 
+
+
+texts = strings
+
+
++ operator 
+-It is used for addition when used between 2 numbers 
+-it is used for concatenation when used between 2 strings or 1 number and 1 string 
+-concatenation: means just putting the data types together - attaching
+
+2 + 4           => 6
+10 + 23         => 33
+
+'abc' + 'xyz'   => 'abcxyz'
+'a  ' + '  b'   => 'a    b'
+
+'ab' + 25       => 'ab25' 
+10 + 'x'        => '10x'
+
+'23' + '10'     => '2310'
+'5' + 5         => '55'
+2 + '45'        => '245'
+
+
+
+
+
+4398657394876583746 > Number.MAX_SAFE_INTEGER       -> bigint
+typeof 4398657394876583746 == bigint                -> bigint
+
+
+
+When to create a separate variable?
+    -If you use it only once, then do not create a new variable
+    -If you use it multiple times, then create a new variable

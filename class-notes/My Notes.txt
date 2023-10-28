@@ -1,0 +1,10 @@
+Random number generator:
+Math.floor(Math.random() * (max - min + 1 ) + min);
+
+Accessing max and min:
+Math.min() and Math.max()
+
+Strings:
+When accessing single characters, str[] is usually more efficient than str.at(), except for accessing the last characters
+or when referencing the string from the end
+When accessing multiple characters in a string, using str.slice(x, y) can be the easiest and most preferred way to do so

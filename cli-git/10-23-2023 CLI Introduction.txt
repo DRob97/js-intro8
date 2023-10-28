@@ -1,0 +1,104 @@
+
+
+10-23-2023 CLI Introduction
+CLI -> Command Line Interface
+
+macOS -> Terminal 
+Windows -> cmd or command prompt / powershell
+
+
+1. pwd (mac) vs cd (windows)
+pwd -> print working directory
+cd  -> change directory
+
+Directory = folder
+
+Both of these commands helps us to see where we are. 
+Simply, tell me where I am.
+
+PATH = location = where you are
+
+Home directory: 
+Windows -> C:/Users/{username}
+Mac -> /Users/{username}
+
+Root directory:
+Windows -> C:/
+Mac -> /
+
+How to navigate to Home directory?
+Mac -> Go to Finder and use cmd + shift + H
+Windows -> Go to File Explorer, navigate C drive, click on Users and click on your username
+
+2. ls (mac) or dir (windows)
+ls -> list
+dir -> directories
+
+Both of these commands helps us to see what we have in the current address/location/folder.
+Simply, list all the items we have in the current folder.
+
+NOTE: ls -a is used to list all the files and folders including the hidden ones for mac users.
+
+3. clear (mac) vs cls (windows)
+Both of these commands are used to clear the working space
+
+4. cd directoryName (mac and windows)
+cd = change directory
+
+This command is used to navigate to specified directory/folder
+
+5. mkdir directoryName (mac and windows)
+mkdir = make directory
+
+This command is used for creating a new folder in the current location/path/directory
+
+You can create multiple folders at once by space separator
+EX: mkdir folder1 folder2 folder3 -> this will create 3 separate folders with the given names 
+
+You can also create folder name with multiple words space separated using double quotes
+EX: mkdir "JS Sources" -> this creates only one folder with the name "JS Sources"
+
+
+6. rmdir directoryName (mac and windows) vs rd directoryName (windows)
+rmdir = remove directory
+
+These command is used for deleting an existing folder in the current location/path/directory
+NOTE: It deletes only if the folder is EMPTY.
+
+7. cd .. (mac and windows)
+cd .. = change directory to the parent folder
+
+
+8. rm -rf directoryName (mac) vs rmdir /s directoryName or rmdir /s /q directoryName (windows)
+rmdir = remove by force
+
+This command is used for removing an existing folder in the current location/path/directory
+NOTE: It deletes even though folder is not EMPTY.
+
+rmdir /s directoryName -> asks a question if you are sure and deletes the directory if you choose Y 
+rmdir /s /q directoryName -> deletes the directory without any question quietly
+
+CHANGE DIRECTORY - cd directoryName
+cd directoryName -> moves to child directory with the given name
+cd .. -> moves back to parent 
+
+
+9. cd /  (mac and windows) 
+This command is used to move to root directory 
+
+10. cd ~  vs cd %userprofile% (windows)
+This command is used to move to home directory
+
+11. touch fileName (mac) vs echo. > fileName (windows)
+
+These commands are used to create empty files 
+
+
+12. rm fileName (mac) vs del fileName (windows)
+These commands are used to create files 
+
+13. echo "myInitialContent" > fileName (mac and windows) 
+
+This commands is used to create a file with an initial content 
+
+cmd + shift + . -> this combination of keys is used to reveal the hidden folders on a mac folder/directory

@@ -1,0 +1,171 @@
+
+
+
+10-15-2023 Conditional Statements
+JS if else: it works around a condition which is either true or false 
+-if statement can be used without else statement 
+-else statement cannot be used wihtout if statement!!!
+-In ladder statements, ONLY one of the block will be executed!!!
+
+{} -> represents block 
+
+{
+    // blck of code
+}
+
+
+else {
+    // 
+}
+
+
+if ______, then I will run ________.
+else, I will run _____.
+
+
+let isCoffee = true; // There is coffee 
+
+if(isCoffee) {
+    // A cup of coffee 
+}
+else {
+    // cup of tea
+}
+
+
+
+let isCoffee = false;
+let isTea = false;
+
+if(isCoffee) {
+    // A cup of coffee 
+}
+else if(isTea) {
+    // A cup of tea
+}
+else {
+    // A cup of water
+}
+
+
+
+Nested if else: if one condition is completely dependent from another condition, then we can use nested if else statements
+
+        coffee 
+with cream      without cream
+
+
+        tea
+with sugar      wihtout sugar
+
+
+let isCoffee = false;
+let isTea = false;
+let isCream = true;
+let isSugar = false;
+
+if(isCoffee) {
+    // A cup of coffee 
+    if(isCream) {
+        // Add cream
+
+        if(isSunday) {
+            // add 3 
+        } 
+        else {
+            // add 1
+        }
+    }
+}
+else if(isTea) {
+    // A cup of tea
+    if(isSugar) {
+        // Add sugar
+    }
+}
+else {
+    // A cup of water
+}
+
+
+
+if(validUsername) {
+    // Ask password
+    if(validPassword) {
+        // Log user in
+    }
+     else {
+        // There was a problem
+        // Your password is incorrect
+     }
+}
+else {
+    // There was a problem
+    // We cannot find an account with that email address
+}
+
+
+
+Short- if else 
+let english_exam_score = 59; // any value between 0 and 100
+
+if(english_exam_score >= 60) { 
+    console.log('PASS');
+}
+else {
+    console.log('FAIL');
+}
+
+THE ABOVE if-else statements could be shortened. You can do this only there is one line of the in the if-else block
+if(english_exam_score >= 60) console.log('PASS');
+else console.log('FAIL');
+
+
+if(true) {
+    console.log('Hello World);
+    console.log('Today is Sunday!');
+}
+else {
+    console.log('I hate the world');
+}
+
+
+TERNARY OPERATOR
+
+Find max number between 2 numbers 
+let num1 = 20, num2 = 10;
+
+let max;
+
+if(num1 > num2) {
+    max = num1;
+}
+else {
+    max = num2;
+}
+
+We can simplify above if-else using ternary operator 
+let num1 = 20, num2 = 10;
+let max = num1 > num2 ? num1 : num2; 
+
+
+Different ways to check if a name starts with j ignoring cases
+1.      name[0] === 'J' || name[0] === 'j'
+2.      name.toUpperCase()[0] === 'J'
+3.      name.toLowerCase()[0] === 'j'
+4.      name.startsWith('J') || name.startsWith('j')
+5.      name.toUpperCase().startsWith('J')
+6.      name.toLowerCase().startsWith('j')
+
+
+
+Using if-else statements within a function
+Write function that takes a name and check if it starts with 'E' or 'e' and returns a boolean
+Function name is startE.
+NOTE: If the given name is empty -> then return false
+
+startE('Emily') -> true
+startE('emily') -> true 
+startE('Alex') -> false 
+startE('') -> false
+

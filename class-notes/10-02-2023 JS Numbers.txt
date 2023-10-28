@@ -1,0 +1,35 @@
+
+
+10-02-2023 JS Numbers
+
+Numbers in Javascript are whole numbers and decimal numbers.
+
+
+Math.random() returns a random number bt zero (included) and one (not included)
+
+0.00000000000000000001
+0.34762348576349578394
+.
+.
+.
+0.99999999999999999999
+
+
+
+Steps to produce random numbers between a and b (a is less than b)
+1. Math.random() return 0 - 0.999999999
+2. Multiply the result with the count of numbers you need (b - a + 1)
+3. Floor this result down
+4. Add your min number which is a to the resul
+
+
+
+
+0.743645656346 * 3 -> 2.13463463456346      -> 2 + 7    -> 9
+0.134634634634 * 3 -> 0.33463463463463456   -> 0 + 7    -> 7
+0.5346346346346 * 3 -> 1.5346346346346346   -> 1 + 7    -> 8
+
+Math.floor(Math.random() * (max - min + 1 ) + min)
+
+Random numbers bt 103 and 1047
+Math.floor(Math.random() * (1047 - 103 + 1 ) + 103)

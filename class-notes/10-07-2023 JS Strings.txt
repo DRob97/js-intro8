@@ -1,0 +1,121 @@
+
+
+
+
+10-07-2023 JS Strings
+-strings are used to store text data - sequence of characters 
+-we can use either single or double quotes to represent a string data
+-string concatenation: this is adding multiple strings together using + operator
+    NOTE: anyData + string or string + anyData will be considered as concatenation and anyData will be appended to the string 
+
+true + 'abc'    -> 'trueabc'
+123 + 'Hello'   -> '123Hello'
+
+ES6 backticks - String Templates - Template Literals
+-it makes variable or expression embedding easier like below
+${} -> interpolation
+
+let quantity = 5, price = 2;
+
+console.log(`The total of ${quantity} items cost for $${quantity * price}.`);
+The total of 5 items cost for $10.
+
+String properties and methods
+property does not take any parantheses or anything.
+functions or methods always end with ().
+
+variable.length; // a property
+Math.PI; // a property 
+Number.MAX_SAFE_INTEGER; // a property 
+
+Math.max(2, 3); // a method
+variable.toLowerCase(); // a method 
+
+
+EXTRACTING CHARACTERS 
+1. using property access [] with indexes 
+2. using charAt() method 
+3. charCodeAt() method
+
+
+TRIMMING REDUNDANT WHITESPACE CHARACTERS 
+redundant = extra, useless 
+1. trim() is used to remove whitespaces at the beginning and the end of the string variable 
+2. trimStart() is used to remove whitespaces at the beginning of the string variable 
+3. trimEnd() is used to remove whitespaces at the end of the string variable 
+
+
+CHANGING THE CASES - upper case or lower case 
+1. toUpperCase() is used to convert all the letter characters in a string to upper cases
+2. toLowerCase() is used to convert all the letter characters in a string to lower cases
+
+
+// REPLACING PART OF YOUR STRING - a word or a character 
+1. replace(target, source); // this replaces ONLY FIRST OCCURRENCE
+2. replaceAll(target, source); // this replaces ALL THE OCCURRENCES
+
+
+index = position of a character or a substring in a string 
+
+
+11. search()
+-str.search(character) or str.search(substring) -> returns the position (index) of the first occurrence of the character or substring
+-it returns position or index as a number.
+-if the character or substring does not exist in the original string, then it returns -1.
+
+
+12. indexOf()
+-str.indexOf(character) or str.indexOf(substring) -> returns the position (index) of the first occurrence of the character or substring
+-it returns position or index as a number.
+-if the character or substring does not exist in the original string, then it returns -1.
+
+
+13. lastIndexOf()
+-str.lastIndexOf(character) or str.lastIndexOf(substring) -> returns the position (index) of the last occurrence of the character or substring
+-it returns position or index as a number.
+-if the character or substring does not exist in the original string, then it returns -1.
+
+
+14. includes()
+-str.includes(character) or str.includes(substring) -> returns true if the character or the substring exists in the original and false if it does not
+-it returns a boolean.
+
+
+15. startWith()
+-str.startWith(character) or str.startWith(substring) -> returns true if the original string starts with the character or the substring and false if it does not
+-it returns a boolean.
+
+
+16. endsWith()
+-str.endsWith(character) or str.endsWith(substring) -> returns true if the original string ends with the character or the substring and false if it does not
+-it returns a boolean.
+
+
+17. slice()
+-str.slice(startIndex) or str.slice(startIndex, endIndex) -> returns a partial string from the original string off of the given indexes
+-it returns a string. 
+
+18. substring()
+-str.substring(startIndex) or str.substring(startIndex, endIndex) -> returns a partial string from the original string off of the given indexes
+-it returns a string. 
+
+NOTE: If you need to extract a partial string from the middle of original string, 
+then you need use str.slice(startIndex, endIndex).
+In this case startIndex is included but endIndex is excluded.
+
+slice() vs substring()
+-The difference is using these methods with negative indexes.
+-Negative indexes with substring() will always be considered as 0
+NOTE: Similarity: They both return empty string if the startIndex is greater or equal endIndex
+
+
+19. split() 
+-split(separator) -> returns an array with the original string elements splitted with separator 
+-returns an array (object).
+
+
+
+00005
+00015
+01000
+53000

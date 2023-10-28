@@ -1,0 +1,83 @@
+
+
+
+10-04-2023 JS Strings
+
+-String is a data type that stores a sequence characters in single or double quotes.
+-It is a primitive data type 
+
+Data types:
+1. Primitives: strings, numbers, null, undefined, bigint, boolean, symbol
+2. References: objects, there are thousands of them. Arrays, Objects, Math, Number, Math 
+
+
+NOTE: Each reference type we are going to learn will come up with many properties and functions.
+properties examples:
+Math.PI; 
+Number.MAX_SAFE_INTEGER;
+array.length;
+
+functions:
+Number.parseInt(data);
+Number.parseFloat(data);
+Math.pow(2, 3);
+Math.min(2, 3);
+Math.max(4, 7, 10);
+
+
+
+length property
+-it returns the number of characters in a string as a number!!!
+
+
+RETRIEVING THE CHARACTERS FROM A STRING
+1. property access
+-str[index] -> returns the character found in the specified index
+-it returns a string if the given index is valid. Otherwise, it returns undefined.
+
+
+2. charAt(index)
+-str.charAt(index) -> returns the character found in the specified index
+-it always returns a string whether the given index is valid or not.
+
+
+3. charCodeAt(index)
+-str.charCodeAt(index) -> returns the ASCII decimal representation of the character found in the specified index.
+-it returns a number whether the given index is valid or not.
+
+
+CHANGING CASES
+4. toLowerCase() 
+-str.toLowerCase() -> returns the string back lowercased.
+
+
+5. toUpperCase() -> returns the string back uppercased.
+
+
+TRIMMING WHITESPACES
+6. trim()
+-str.trim() -> removes all the whitespaces from both ends (head and tail of the string) 
+-returns strings
+
+
+7. trimStart()
+-str.trim() -> removes all the whitespaces from the head of the string (beginning) 
+-returns strings
+
+
+8. trimEnd()
+-str.trimEnd() -> removes all the whitespaces from the tail of the string (end) 
+-returns strings
+
+
+REPLACING PARTIAL SUBSTRING OR SINGLE CHARACTER WITHIN A STRING
+9. replace(target, source) 
+- str.replace(target, source) - it replaces first occurrence of target with the source given 
+- it returns a string back
+NOTE: if the given target does not exist in the original string, then nothing replaces.
+
+
+10. replaceAll(target, source) 
+- str.replaceAll(target, source) - it replaces all the occurrences of target with the source given 
+- it returns a string back
+NOTE: if the given target does not exist in the original string, then nothing replaces.

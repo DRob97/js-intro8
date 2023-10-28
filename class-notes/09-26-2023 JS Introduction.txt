@@ -1,0 +1,92 @@
+
+
+09-26-2023 JS Introduction
+
+
+
+-machine
+-device
+-input output
+-ones and zeros which is binary
+-convertion - transforming input
+-calculation
+-brain
+-processing information
+
+
+
+Computer: A computer is an electronic machine that is used to input, process, and then output data,
+typically in binary form, according to instructions given to it in a variable program.
+
+Computer is consist of both hardware software:
+Hardware: all the parts you can feel, touch.
+input devices: mouse, keyboard
+output devices: printer, screen
+CPU, harddisk, RAM and more.
+
+Software:
+OS (linux, windows, macOS, android, IOS)
+applications: gmail, google, amazon
+Office suite, adobe-reader, games
+
+Software is the soul while hardware is the body parts.
+
+CPU: Central Processing Unit: the brain of the computer
+
+Counting System:
+Human way of counting is relying on base-10:
+0 1 2 3 4 5 6 7 8 9     -> base-10 number system - Decimal System
+10
+100
+1000
+10000
+100000
+1000000
+
+| | | | | | | | | | -> -> oldest way of number system
+
+Binary code: ones and zeros which known as computer language
+ONE: ON
+ZERO: OFF
+
+PEN -> 011010101101011010
+
+byte: storage unit
+bit: either zero or ones
+
+1 byte =  8 bits
+1024 bytes = k
+
+
+HUMAN LANGUAGE      COMPUTER LANGUAGE
+0                   00000000
+1                   00000001
+23                  00010111
+45                  00101101
+
+
+Computer converts everything to ones and zeros.
+Letters?
+
+HUMAN LANGUAGE      COMPUTER LANGUAGE
+PEN                 01010000-01000101-01001110
+Cat                 01000011-01100001-01110100
+C = 67    01000011
+a = 97    01100001
+t = 116   01110100
+
+Programing Language: Source code is any code that is written with programming languages
+source code -> computer processes it and converts it to binary code (ones and zeros) -> ASCII -> human readable language
+source code is simply known as the "code".
+-Examples: JavaScript, Java, Go, Phyton, C#
+
+DIFFERENCE BT Natural languages and Programing languages: Ambiquity - confusion or mistakes.
+Natural languages have grammar rules while programming languages has syntax rules.
+
+EXAMPLE:
+Some sugar
+1 lb of sugar
+
+Natural languages: English, Spanish
+instructions to computer
+used for building applications

@@ -1,0 +1,62 @@
+
+
+
+10-24-2023 GIT - GitHub Introduction 
+
+Set up 
+1. Install git on your local and check if it correctly installed
+    git --version 
+    git -v 
+
+
+2. Create a GitHub account and set global information for git 
+git config --global user.name TechGlobalSchool
+git config --global user.email johndoe@example.com
+git config --global init.defaultBranch master
+
+Check your global information if they are set correctly 
+git config --global --list
+
+
+3. Check your GitHub/GitLab/Bitbucket and make sure the default branch is matching the one you set for local
+Settings/Repositories/Default Branch
+
+
+4. Set up an SSH keys which is used instead of password while you push or pull code 
+    ssh-keygen
+    copy your public key into GitHub/GitLab/Bitbucket SSH keys
+    Settings/SSH & GPG keys/New SSH 
+
+pushing code = sending your code from local repository to remote repository 
+pulling code = achieving code from remote repo to local repo
+
+
+How to track changes with GIT and push it to GitHub
+1. Create a Local repo 
+2. Create a Remote repo
+3. Initialize your local repo with GIT
+    git init
+4. Link the local repo with remote repo 
+    NOTE: Always use ssh link
+    git remote add origin git@github.com:{username}/myGitDemo.git
+
+
+5. Check your changes
+    git status
+
+6. Stage changes 
+    git add .
+
+NOTE: Abive command is used to stage all the changes you have made
+NOTE: You can also use "git add fileName" to stage particular file
+
+7. Commit changes to be pushed
+    git commit -m "meaningful message"
+
+8. Push the changes to your remote repo
+    git push
+
+NOTE: For the first time we need to use below command instead of just "git push"
+    git push -u origin branchName 
+or 
+    git push --set-upstream origin branchName

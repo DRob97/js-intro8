@@ -1,0 +1,43 @@
+
+
+
+10-08-2023 Basic Functions
+
+Functions: 
+String methods: at(), charAt(), toLowerCase(), slice(), indexOf(), includes()
+Math methods: min(), max(), abs(), random(), sqrt(), pow()
+Number methods: toFixed(), toPrecision()
+
+
+What is a function/method?
+-These are components that could execute a task whenever used.
+-They are reusable and could be used whenever needed.
+
+Programming languaes provides us thousands of pre-built methods/functions to use in our applications/programs.
+However, you may need more functions and you can create your custom functions in case the language does not provide it.
+
+
+// Start the meeting
+// Create a file
+// Start coding
+
+SYNTAX:
+function name() {
+    // reusable coding statements
+}
+
+name(); // invoking the function
+
+How to execute the block of function?
+-To be able to execute the block of function, you need to invoke/call the function with its name.
+
+
+FALSY VALUES: false, empty string, undefined, null, 0, NaN
+Falsy values will evaluate to zero when coverting to numbers 
+TRUTHY VALUES: true, non-empty strings, any number but not zero
+Truthy values will evaluate to one when coverting to numbers 
+
+
+{} -> code block 
+
+HOISTING: This is known as JS moving function or some variable declarations to the top of the file. 

@@ -1,0 +1,148 @@
+
+
+
+09-27-2023 JS Outputs & Variables
+
+
+RECAP:
+
+Computer: device or machine -> input - process - output 
+    hardwares + softwares
+
+Computer language: Binary code (ones and zeros)
+ZERO: OFF
+ONE: ON 
+
+ASCII: helps us to convert letters to decimals and ones and zeros and visa versa
+
+code = source code: a piece of code that is written in any programming language 
+
+Programming languages: JavaScript, Java, C, C++, Go
+These languages enable us to engage with computers and build server-side and web applications and more.
+console.log("Hello World"); // JS 
+System.out.println("Hello World"); // Java
+Console.WriteLine("Hello World"); // C#
+
+Natural languages: English, Spanish
+    Grammar, vocabulary, alphabet
+
+Programming languages: JavaScript, Java, C, C++, Go
+    Syntax: this is like grammar rules for programming languages
+
+Syntax rules are written and you MUST follow.
+Coding Conventions: standards or common rules that every programmer follow even though they are not part of the syntax rules.
+
+
+EXECUTE: RUN -> that means just running your code 
+
+STATEMENT: each line of the code is a statement 
+Every statement is ended with a ; 
+
+
+COMMENTS:These are used for explaining what our the code below does but they are not executed by runtime environment (nodeJS)
+// This is a single-line comment
+
+/*
+This is a multi-line comments
+Whatever you put here will not be executed.
+console.log('I am 45 years old');
+*/
+
+/**
+ * Documentation
+ * comments
+ */
+
+
+ /  forward slash
+ \  backward slash 
+ () opening and closing parantheses
+ {} opening and closing curly braces
+ [] opening and closing square brackets
+ ;  semicolon
+ :  colon
+ .  period or dot 
+ ,  coma
+ #  pound or hashtag
+ $  dollar sign 
+ <  less than sign 
+ >  greater than sign 
+ =  equal 
+ <= less than or equal
+ >= greater than or equal 
+ !  exclamation, NOT 
+ != not equal 
+ == equal equal (not strict equality)
+ === triple equal (strict equality)
+ &  AND 
+ |  OR 
+ ^  caret 
+ `  backticks
+ ~  tilde
+ _  under score 
+ 
+
+
+NOTE: JS executes program line by line from top to bottom and left to right!!!
+
+
+var vs let vs const 
+var: is old
+let: can be re-assigned 
+const: cannot be re-assigned
+
+
+VARIABLE SYNTAX:
+1. var variableName = value;
+2. let variableName = value;
+3. const variableName = value;
+
+
+
+let age; // true
+let AGE; // true but not preferred
+let shift$; // true
+let number of students; // false as it has spaces
+let _firstLetter; // true
+let 8students; // false as it starts with digit
+let isWheatherSnowing#; // false as # is not allowed
+let @balance; // false as @ is not allowed
+
+
+
+let number_of_students;
+let numberOfStudents;
+
+NOTE: specials characters are not allowed for variable naming except _, $ and other currency signs
+
+
+HOW TO DUPLICATE A LINE IN VSCODE?
+Shift + Option + Up/Down (on Macs) 
+Shift + Alt + Up/Down (on Windows) 
+
+
+const name, age; // false as const has to be initialized
+let n1 = 45, n2; // true
+const num1 = 45, num2; // false as num2 is not initialized 
+let x, let y; // false 
+let a; let b; // true but we prefer these in separate lines
+let i1; i2; // true but you will get error if you try to use i2
+
+
+let x, y; // true
+let x;
+let y;
+
+
+let a; 
+let b;
+
+
+compiler-time error = compilation error = syntax error 
+    -You will see these errors right away without running the code 
+    -These are completely human mistakes like spelling or causing syntax error
+
+runtime error
+    -Compiler allows you to continue as there is no syntax errors
+    -You will see these errors while your code executes
+    -Either human or system causes the error 

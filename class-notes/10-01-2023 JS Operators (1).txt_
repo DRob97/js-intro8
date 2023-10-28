@@ -1,0 +1,136 @@
+
+
+10-01-2023 JS Operators
+
+RECAP:
+
+DATA TYPES:
+data=information
+
+1. Primitive Types: simple piece of information
+    1. string: text data like name, address
+    2. number: whole and decimal numbers like 10 or 3.5
+    3. boolean: true or false
+    4. undefined: declared but not assigned
+    5. null: declared and assigned with null on purpose (not pointing to any information or value)
+    6. bigint: large numbers that regular number data cannot store 
+    7. symbol:
+2. Reference Types: advanced-complex objects
+    arrays: store multiple elements (data) in a single variable 
+    objects: key-value pairs of an object 
+
+
+
+JS OPERATORS: 
+Assignment operator: equal sign is used to assign a value into a variable 
+    let name = 'Alex';
+    let age;
+    age = 25; // assignment
+
+
+Math-arithmetic operators: they allow us do calculations
++, -, *, /, %, **
+
+ORDER OF OPERATIONS
+PEMDAS 
+1. parenthases
+2. exponentiation
+3. multiplication or division
+   modules-remainder
+4. addition or subtraction
+
+
+console.log('Sum = ' + num1 + num2); // Sum = 64
+console.log('Subtraction = ' + num1 - num2); // NaN - Not a Number
+
+NOTE: + operator is used both for addition and concatenation
+number + number   -> addition
+string + string   -> concatenation
+string + number   -> concatenation
+number + string   -> concatenation
+
+
+'Sum = 64'
+
+'Subtraction = 6' - 4 -> NaN
+
+'Hello' - 10
+
+
+
+console.log('2' + 2 + 5); // '225'
+console.log('3' + 5 - 2); // 33
+
+'2' + 2 + 5 -> '22' + 5 -> '225'
+'3' + 5 - 2 -> '35' - 2 -> 33
+'3a' + 5 - 2-> '3a5' - 2-> NaN 
+
+
+COMPARISON OPERATORS 
+-They are used compare 2 variables with each other
+-The result of any comparison will return either true or false (boolean)
+== 	    equal to
+=== 	equal value and equal type
+!= 	    not equal
+!== 	not equal value or not equal type
+> 	    greater than
+< 	    less than
+>= 	    greater than or equal to
+<= 	    less than or equal to
+
+FALSY VALUES: false, 0, NaN, null, undefined, '', ""
+TRUTHY VALUES: true
+
+true or truthy values are considered as 1
+false or falsy values are considered as 0
+
+
+
+let x = 10, y = 20, z = "10";
+
+x == z; // true 
+x === z; // false
+y < z; // false
+x <= y; // true
+x >= z; // true
+y > x; // true
+x >= y; // false
+(x >= z) < y; // true
+
+
+LOGICAL OPETATORS
+&& 	logical and
+|| 	logical or
+! 	logical not
+
+
+&& - AND OPERATOR 
+expression1 && expression2 
+true && 3 === 3         -> true 
+3 > 5 && 5 < 10         -> false 
+
+
+|| - OR OPERATOR 
+expression1 || expression2 
+true || false   -> true
+
+
+! - NOT OPERATOR 
+true        -> true 
+'a' === 'a' -> true 
+
+!true       -> false 
+!false      -> true 
+
+!(3 === 3 && 2 > 5)      -> true
+
+
+?? - Nullish Coalescing Operator
+expression1 ?? expression2 
+
+The result will always be expression2 if the expression1 is either null or undefined 
+The result will always be expression1 if the expression1 is NOT null or undefined 
+
+null ?? anything        -> anything
+undefined ?? anything   -> anything
+notNullOrUndefined ?? anything -> notNullOrUndefined
