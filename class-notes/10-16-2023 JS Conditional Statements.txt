@@ -1,0 +1,76 @@
+
+
+
+10-16-2023 Conditional Statements - Switch
+
+RECAP:
+if else statements: conditional statements: control flow statements
+-these are seperate code blocks to be executed based on a condition 
+-Only one of the code block is executed which is the truthy condition 
+
+SYNTAX:
+if(condition) { // boolean, truthy or falsy values
+    // Execute this block
+}
+else {
+    // Execute this block
+}
+
+
+Ladder statements of if else 
+if(condition1) {
+     // Execute this block
+}
+else if(condition1) {
+     // Execute this block
+}
+else {
+     // Execute this block when none of the above condition is true
+}
+
+
+
+Nested statements 
+if(condition1) {
+    if(condition2) {
+        // Execute this
+    }
+    else {
+        // Execute this
+    }
+}
+else {
+    // Execute this
+}
+
+
+
+
+Ternary Operator
+
+let num1 = 10, num2 = 15;
+let max;
+
+if(num1 > num2) max = num1;
+else max = num2;
+
+let max = num1 > num2 ? num1 : num2;
+
+
+let variable = condition1 ? value1 : condition2 ? value2 : condition3 ? value3 : value4;
+
+let variable; // eventually will hold the data value1 or value2 or value3 or value4
+if(condition1) variable = value1;
+else if(condition2) variable = value2;
+else if(condition3) variable = value;
+else variable = value4;
+
+
+Switch vs if-else if - else
+-Switch can be used only if you have certain number of cases
+-Switch is faster than if-else considering performance
+
+
+
+
+

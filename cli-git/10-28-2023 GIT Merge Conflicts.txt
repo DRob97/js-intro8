@@ -1,0 +1,69 @@
+
+
+
+10-28-2023 GIT Merge Conflicts
+
+CLI Commands: Linux commands that we use to run some tasks on our machine using Terminal (mac) command prompt (windows)
+
+cd, ls, pwd, clear, mkdir, touch, echo 
+
+GIT: Version Control System that is used to track changes for a folder/project 
+It enables programmers/team members to collaborate with their changes 
+
+GIT: Global Information Tracker 
+
+GitHub: Hosting website that you can see your changes, add collaborators, create Pull Request and more. 
+
+
+Pull Request or Merge Request:
+-When you did changes in a local branch, and when you push these changes to remote, it goes to your remote branch 
+but not main/master.
+-Then, you request your changes to be merged to main/master, this is called Pull Request or Merge Request. 
+REMOTE to REMOTE and from one branch to another branch
+
+pull: this is used to pull the changes to your local branch from remote using git pull. 
+REMOTE to LOCAL and from same remote branch to local branch
+
+
+GIT BRANCHING
+git branch          -> used to see the list of existing branches and the one that you are currently on
+git branch {name}   -> used to create a new branch 
+git checkout {name} -> used to switch branch to given branch 
+git checkout -b {name}  -> used to create and switch to newly created branch at the same time
+git branch -d {name}    -> used to delete the branch
+git branch -m oldName newName   -> used to rename a branch 
+
+
+
+HOW TO MERGE ONE LOCAL BRANCH INTO ANTOHER LOCAL BRANCH? 
+1. First make sure you are on correct branch to merge another branch into 
+2. Run "git merge {branchName}" command to merge changes from specified branch to your branch 
+
+Assume that you are branch called as US123-Login-Task and you want to merge changes to this from master.
+git merge master        -> merges all the changes from master to US123-Login-Task
+
+
+MERGE CONFLICTS 
+-This happens only if 2 or more collaborators are modifying the same file and one of them trying to have pull request to 
+master without PULLING THE LAST CHANGES.
+
+1. Dylan already did changes with dylan.js and merged them to master.
+2. Akin did not pull the changes and he created his own branch off of the master in local and start making changes on the
+same file.
+3. Akin also push the changes with local branch and requesting a PULL REQUEST and conflict happens!!!
+
+
+HOW TO RESOLVE:
+1. If the conflict is a small one and could be resolved quickly, then just resolve it in the hosting website and 
+complete the PULL REQUEST.
+
+2. Sometimes conflict is more complex and you need to resolve all in your local. 
+    2a. First get back to your local
+    2b. Switch branch to master 
+    2c. Pull the changes with "git pull" to master
+    2d. Switch back to your local branch that caused the conflicts 
+    2e. Merge master into your local branch using "git merge master" 
+    2f. Resolve all the conflicts on your editor
+    2g. Track new changes, commit them again and push 
+    2h. Go back to your PULL REQUEST page, you will see all the conflicts are resolved and now you can complete the 
+    PULL REQUEST.

@@ -1,0 +1,31 @@
+
+
+
+10-28-2023 JS Arrays Intro
+Array: It is a reference type data used for storing similar-multiple data in a single variable.
+
+HOW TO CREATE AN ARRAY?
+1. using square brackets [] known as array literals - MOSTLY PREFERRED
+const arr1 = []; // empty array 
+const arr2 = [1, 10, 7]; // numbers array 
+const arr3 = ['John', 'Alex']; // string array
+const arr4 = [false, true, false]; // boolean array
+
+2. using new Array() constructor. NOT PREFERRED
+const arr5 = new Array(); // empty array
+const arr6 = new Array(1, 2, 3); // numbers array
+
+
+The typeof operator for the array will return object.
+console.log(typeof arr1); // Object
+console.log(typeof arr6); // Object
+
+
+ARRAY INDICES - INDEXES
+-Each array element is stored with an index starting from zero and you can use this 
+index to access, update, delete and manipulate the data.
+
+HOW TO CHECK THE SIZE ARRAY?
+-We can use the length property to check how many elements exists within the array 
+console.log(arr6.length); // 3
+console.log(arr1.length); // 0
