@@ -31,3 +31,6 @@ console.log(fruits);                // [ 'Kiwi', 'Orange', 'Watermelon', 'Grapes
 fruits.splice(1, 1);
 fruits.splice(2, 1);
 console.log(fruits);                // [ 'Kiwi', 'Watermelon', 'Apple' ]
+
+console.log(typeof fruits);
+console.log(typeof fruits[0]);
