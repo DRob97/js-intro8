@@ -1,0 +1,69 @@
+
+
+
+10-30-2023 Array Methods - Destructuring
+
+-typeof operator for arrays returns object
+
+How do you understand if a variable is an array?
+-You can use Array.isArray() method to check if a variable is actually an array.
+-If this method returns true, then the variable is array, otherwise it will return false stating the variable
+is not an array.
+
+
+12. Array.isArray() method 
+-used to check if a variable is array.
+-it takes an argument to be checked.
+-it returns a boolean. It returns true if the variable is actually an array, false otherwise.
+-it does not change anything with the original array.
+
+
+13. sort() method 
+-used to sort array elements
+    -Strings: alphabetically from A-Z and a-z
+    -Numbers: You may expect to sort from smaller to greater number but it still sorts alphabetically
+-it does not take any argument when you are sorting strings but we can have some arguments to sort numbers as expected.
+-it returns the original array back sorted.
+-it modifies the original array and returns it.
+
+
+SORTING NUMBERS with a comparison callback function!
+callback function: is a function passed into another function as an argument.
+
+const numbers = [ 1, 2, 5, 100, 21 ];
+
+numbers.sort((a, b) => a - b); // sorting ascending - smaller to bigger
+// numbers.sort((a, b) => b - a); // sorting descending - bigger to smaller
+
+console.log(numbers); // [ 1, 2, 5, 21, 100 ]
+
+
+14. flat() method
+-reduces the dimension of nested arrays with their elements.
+-if it is only one nested array, you don't need to but for more nested arrays, you may use dimension argument.
+-it returns a new array which flattened.
+-it does not change anything with the original array.
+
+
+15. toString() method 
+-used to convert an array to a string 
+-does not take any argument
+-it returns a string 
+-it does not change anything with the original array.
+
+
+16. join() method 
+-used to convert an array to a string 
+-does not take any argument if you want to get , default separator (coma). However, it allows us to
+    give our own separator as a string argument. 
+-it returns a string 
+-it does not change anything with the original array.
+
+
+ARRAY DESTRUCTIRING
+-Destructuring allows us to extract values from arrays, objects, or other iterable data 
+structures and assign them to variables in a more concise and readable way. 
+
+iterable data = you can loop that data.
+
+
