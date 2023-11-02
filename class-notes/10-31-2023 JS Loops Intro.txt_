@@ -1,0 +1,40 @@
+
+
+
+10-31-2023 JS Loops Intro
+
+Loops: are used for repeated code in a block and makes our code more readable.
+-Loops will execute until a termination condition is met.
+-Loops are helpful to eliminate duplicating codes and time-effort saving.
+
+iteration: each time of execution within a loop - each circle
+infinite loop: that is a loop that never stops because of a logical mistake and termination
+condition is never met.
+
+JS Loops
+1. for loop 
+2. while loop 
+3. do-while loop 
+4. for...of loop (arrays)
+5. for..in loop (objects)
+
+
+1. for loop 
+-We need know that it takes 3 expressions 
+
+Syntax:
+for(initialization; condition; update) {
+    // block to be executed
+}
+
+Infinite for loop 
+for ( ; ; ) {
+
+}
+
+for (let i = 0; i < 5; i--) {
+
+}
+
+
+FIRST RULE OF CODING: IF IT WORKS, DON'T TOUCH IT!
