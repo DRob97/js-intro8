@@ -1,0 +1,70 @@
+
+
+
+11-01-2023 JS Loops - While 
+
+
+Loop: loops are used to execute a block of code repeatedly until a termination point is reached.
+It prevents code duplication and save tim-effort for programmers. 
+
+5 types of loops 
+1. for loop 
+    for(start; condition; update) {
+        // Code block to execute
+    }
+
+2. while loop
+3. do-while loop 
+4. for...of loop 
+5. for...in loop 
+
+
+Infinite loop: It is a loop that never reached the termination point. 
+
+for( ; ; ) {
+    // code
+}
+
+Iteration: Each cycle that loop executes. 
+
+
+
+2. while loop 
+
+Syntax:
+while(condition) {
+    // code block to be executed
+}
+
+for(let i = 1; i <= 5; i++) {
+    console.log(i);
+}
+
+
+let i = 1;
+
+while(i <= 5) {
+    console.log(i);
+    i++;
+}
+
+
+Unreachable code: This is a piece code that will never execute and usually it is a mistake done by programmer.
+
+3. do-while loop
+-This is similar to while loop except it runs the code block first, then checks the condition.
+-So, that is the reason your code block for do-while will execute at least once all the time. 
+
+HOW TO DECIDE BETWEEN for vs while vs do-while loops?
+
+            Do I know how many times the program will execute?
+                YES                               NO
+                for                         while or do-while 
+                                ARE WE GOING TO EXECUTE IT AT LEAST ONCE?
+                                    YES                     NO
+                                  do-while                 while
+
+
+
+                                  
+                                                    
