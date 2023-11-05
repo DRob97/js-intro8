@@ -182,3 +182,66 @@ reverseStringWords("I like JavaScript");
 reverseStringWords("Hello");
 reverseStringWords("");
 reverseStringWords("    ");
+
+// Task 18
+function getEvens(x, y){
+    const max = Math.max(x, y);
+    const min = Math.min(x,y);
+    const evenArray = [];
+
+    for(let i = min; i <= max; i++){
+        if(i % 2 === 0) evenArray.push(i);
+    }
+    return evenArray;
+}
+
+console.log(getEvens(2, 7));
+console.log(getEvens(17, 5));
+console.log(getEvens(4, 4));
+console.log(getEvens(3, 3));
+
+// Task 19
+function getMultipleOf5(x, y){
+    const max = Math.max(x, y);
+    const min = Math.min(x,y);
+    const fivesArray = [];
+    if(x <= y){
+        for(let i = min; i <= max; i++){
+            if(i % 5 === 0) fivesArray.push(i);
+        }
+    }
+    else{
+        for(let i = max; i >= min; i--){
+            if(i % 5 === 0) fivesArray.push(i);
+        }
+    }
+    
+    return fivesArray;
+}
+
+console.log(getMultipleOf5(3, 17));
+console.log(getMultipleOf5(23, 5));
+console.log(getMultipleOf5(5, 5));
+console.log(getMultipleOf5(2, 4));
+
+// Task 20
+function fizzBuzz(x, y){
+    const max = Math.max(x, y);
+    const min = Math.min(x,y);
+    const fbArray = [];
+    for(let i = min; i <= max; i++){
+        if(i % 3 === 0){
+            if(i % 5 === 0) fbArray.push('FizzBuzz');
+            else fbArray.push('Fizz')
+        }
+        else if(i % 5 === 0) fbArray.push('Buzz');
+        else fbArray.push(i);
+    }
+
+    return fbArray.join(' | ');
+}
+
+console.log(fizzBuzz(13, 18));
+console.log(fizzBuzz(12, 5));
+console.log(fizzBuzz(5, 5));
+console.log(fizzBuzz(9, 6));

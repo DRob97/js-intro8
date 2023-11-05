@@ -1,0 +1,63 @@
+
+
+
+11-04-2023- JS Loops for...of 
+
+
+RECAP:
+
+-Loops are common concepts in any programming language and widely used.
+-It eliminates duplicated codes and allows programmer to run a block of code repeatedly.
+-It saves time and effort for the programmer as well.
+
+1. for loop (i loop) (traditional loop)
+2. while loop 
+3. do-while loop
+4. for...of loop (arrays)
+5. for...in loop (objects)
+
+
+for(start; condition; update) {
+    // code block
+}
+
+
+while(condition) {
+    // code block
+}
+
+
+do {
+    // code block
+} while(condition);
+
+while vs do-while 
+-The only difference bt these is that the do-while executes the block of code first, and then check the 
+condition. On the other hand, while checks the condition first, and then executes the block of code.
+
+NOTE: Above difference tells us, the do-while will always execute the block at least ONCE even though
+the condition is right away false.
+
+
+4. for...of loop
+-It is like snytatic sugar added to for loop.
+-for...of loop makes it easy for programmer to work with arrays or all the other iterable objects.
+
+
+WHEN TO USE for loop over for...of loop with arrays?
+-If you need to check each element and manipulate them, then for...of loop will be preferred.
+-If you need to skip and ignore some part of the array elements, and you need indexes, then you use for loop.
+
+
+
+SUM or PRODUCT
+5 + 0       -> 5
+10 + 0      -> 10
+-2 + 0      -> -2
+
+5 * 1       -> 5
+10 * 1      -> 10
+-2 * 1      -> -2
+
+NOTE: Zero is not affecting result when you find sum while one is not affecting any result when you multiply
+numbers.
