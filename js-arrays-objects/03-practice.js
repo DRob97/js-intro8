@@ -60,24 +60,25 @@ const productNames = [];
 
 for(let i = 0; i < appleStore.length; i++){
     if(i === 0){
+        // Assign mostExpensive object the values of the first object in the array
         mostExpensive.productName = appleStore[i].productName;
         mostExpensive.quantity = appleStore[i].quantity;
         mostExpensive.price = appleStore[i].price;
-
+        // Assign leastExpensive object the values of the first object in the array
         leastExpensive.productName = appleStore[i].productName;
         leastExpensive.quantity = appleStore[i].quantity;
         leastExpensive.price = appleStore[i].price;
-
+        // Assign greatestQuantity object the values of the first object in the array
         greatestQuantity.productName = appleStore[i].productName;
         greatestQuantity.quantity = appleStore[i].quantity;
         greatestQuantity.price = appleStore[i].price;
-
+        // Assign leastQuantity object the values of the first object in the array
         leastQuantity.productName = appleStore[i].productName;
         leastQuantity.quantity = appleStore[i].quantity;
         leastQuantity.price = appleStore[i].price;
         continue;
     }
-    
+    // Compare for prices (least and greatest)
     if(appleStore[i].price > mostExpensive.price){
         mostExpensive.productName = appleStore[i].productName;
         mostExpensive.quantity = appleStore[i].quantity;
@@ -88,30 +89,20 @@ for(let i = 0; i < appleStore.length; i++){
         leastExpensive.quantity = appleStore[i].quantity;
         leastExpensive.price = appleStore[i].price;
     }
-
+    // Compare for quantity (least and greatest)
     if(appleStore[i].quantity > greatestQuantity.quantity){
         greatestQuantity.productName = appleStore[i].productName;
         greatestQuantity.quantity = appleStore[i].quantity;
         greatestQuantity.price = appleStore[i].price;
     }
-    else if(appleStore[i].price < leastQuantity){
+    else if(appleStore[i].quantity < leastQuantity.quantity){
         leastQuantity.productName = appleStore[i].productName;
         leastQuantity.quantity = appleStore[i].quantity;
         leastQuantity.price = appleStore[i].price;
     }
-
+    // Push product names into their own array
     productNames.push(appleStore[i].productName);
 }
-
-
-for(const product of appleStore){
-    if(product.price > mostExpensive.price){
-        mostExpensive.productName = appleStore[i].productName;
-        mostExpensive.quantity = appleStore[i].quantity;
-        mostExpensive.price = appleStore[i].price;
-    }
-}
-
 
 console.log(mostExpensive.productName);
 console.log(leastExpensive.productName);
