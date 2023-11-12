@@ -32,24 +32,24 @@ const appleStore = [
 // Find the product with the smallest quantity  -> MacBook Pro 16-inch
 // Find all the product names   -> [ 'iPhone 14 Pro', 'MacBook Pro 16-inch', 'iPad Air', 'Apple Watch Series 7', 'AirPods Pro' ]
 
-//console.log(appleStore[0]);
-
-const mostExpensive = {
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// The following objects must be initialized with 'let' rather than 'const' to allow them to be updated as whole objects
+let mostExpensive = {
     productName: '',
     quantity: 0,
     price: 0
 };
-const leastExpensive = {
+let leastExpensive = {
     productName: '',
     quantity: 0,
     price: 0
 };
-const greatestQuantity = {
+let greatestQuantity = {
     productName: '',
     quantity: 0,
     price: 0
 };
-const leastQuantity = {
+let leastQuantity = {
     productName: '',
     quantity: 0,
     price: 0
@@ -60,44 +60,28 @@ const productNames = [];
 for(let i = 0; i < appleStore.length; i++){
     if(i === 0){
         // Assign mostExpensive object the values of the first object in the array
-        mostExpensive.productName = appleStore[i].productName;
-        mostExpensive.quantity = appleStore[i].quantity;
-        mostExpensive.price = appleStore[i].price;
+        mostExpensive = appleStore[i];
         // Assign leastExpensive object the values of the first object in the array
-        leastExpensive.productName = appleStore[i].productName;
-        leastExpensive.quantity = appleStore[i].quantity;
-        leastExpensive.price = appleStore[i].price;
+        leastExpensive = appleStore[i];
         // Assign greatestQuantity object the values of the first object in the array
-        greatestQuantity.productName = appleStore[i].productName;
-        greatestQuantity.quantity = appleStore[i].quantity;
-        greatestQuantity.price = appleStore[i].price;
+        greatestQuantity = appleStore[i];
         // Assign leastQuantity object the values of the first object in the array
-        leastQuantity.productName = appleStore[i].productName;
-        leastQuantity.quantity = appleStore[i].quantity;
-        leastQuantity.price = appleStore[i].price;
+        leastQuantity = appleStore[i];
         continue;
     }
     // Compare for prices (least and greatest)
     if(appleStore[i].price > mostExpensive.price){
-        mostExpensive.productName = appleStore[i].productName;
-        mostExpensive.quantity = appleStore[i].quantity;
-        mostExpensive.price = appleStore[i].price;
+        mostExpensive = appleStore[i];
     }
     else if(appleStore[i].price < leastExpensive.price){
-        leastExpensive.productName = appleStore[i].productName;
-        leastExpensive.quantity = appleStore[i].quantity;
-        leastExpensive.price = appleStore[i].price;
+        leastExpensive = appleStore[i];
     }
     // Compare for quantity (least and greatest)
     if(appleStore[i].quantity > greatestQuantity.quantity){
-        greatestQuantity.productName = appleStore[i].productName;
-        greatestQuantity.quantity = appleStore[i].quantity;
-        greatestQuantity.price = appleStore[i].price;
+        greatestQuantity = appleStore[i];
     }
     else if(appleStore[i].quantity < leastQuantity.quantity){
-        leastQuantity.productName = appleStore[i].productName;
-        leastQuantity.quantity = appleStore[i].quantity;
-        leastQuantity.price = appleStore[i].price;
+        leastQuantity = appleStore[i];
     }
     // Push product names into their own array
     productNames.push(appleStore[i].productName);
@@ -108,40 +92,32 @@ console.log(leastExpensive.productName);
 console.log(greatestQuantity.productName);
 console.log(leastQuantity.productName);
 console.log(productNames);
+//*/
 /*
-for(let i = 0; i < appleStore.length; i++){
-    if(i === 0){
-        // Assign mostExpensive object the values of the first object in the array
-        mostExpensive = appleStore[i];
-        // Assign leastExpensive object the values of the first object in the array
-        leastExpensive = appleStore[i];
-        // Assign greatestQuantity object the values of the first object in the array
-        greatestQuantity = appleStore[i];
-        // Assign leastQuantity object the values of the first object in the array
-        leastQuantity = appleStore[i];
-        continue;
-    }
-    // Compare for prices (least and greatest)
-    if(appleStore[i].price > mostExpensive.price){
-        mostExpensive = appleStore[i];
-    }
-    else if(appleStore[i].price < leastExpensive.price){
-        leastExpensive = appleStore[i];
-    }
-    // Compare for quantity (least and greatest)
-    if(appleStore[i].quantity > greatestQuantity.quantity){
-        greatestQuantity = appleStore[i];
-    }
-    else if(appleStore[i].quantity < leastQuantity.quantity){
-        leastQuantity = appleStore[i];
-    }
-    // Push product names into their own array
-    productNames.push(appleStore[i].productName);
-}
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// Akin's solution
+if (appleStore.length > 0) {
 
-console.log(mostExpensive.productName);
-console.log(leastExpensive.productName);
-console.log(greatestQuantity.productName);
-console.log(leastQuantity.productName);
-console.log(productNames);
+    let most_expensive_product = appleStore[0];
+    let most_affordable_product = appleStore[0];
+    let product_with_biggest_quantity = appleStore[0];
+    let product_with_lowest_quantity = appleStore[0];
+    const product_names = [];
+
+
+    for (const product of appleStore) {
+        product_names.push(product.productName);
+        if (product.price > most_expensive_product.price) most_expensive_product = product;
+        if (product.price < most_affordable_product.price) most_affordable_product = product;
+        if (product.quantity > product_with_biggest_quantity.quantity) product_with_biggest_quantity = product;
+        if (product.quantity < product_with_lowest_quantity.quantity) product_with_lowest_quantity = product;
+    }
+
+    console.log(most_expensive_product.productName);
+    console.log(most_affordable_product.productName);
+    console.log(product_with_biggest_quantity.productName);
+    console.log(product_with_lowest_quantity.productName);
+    console.log(product_names);
+}
+else console.error('There is no product in the AppleStore!!!');
 */
