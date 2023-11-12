@@ -16,7 +16,7 @@ console.log(str1 + str2 + str3);
 // at() - works like charAt method or [], but more dynamic like slice()
 let name = 'Alexander';
 
-// d
+// Get d from 'Alexander'
 console.log(name[-3]);                  // undefined
 console.log(name.charAt(-3));           // ''
 console.log(name.at(-3));               // 'd'
