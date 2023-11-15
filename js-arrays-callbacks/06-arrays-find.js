@@ -17,5 +17,5 @@ console.log(numbers.findIndex(number => number % 2 === 0));         // 0
 console.log(numbers.findIndex(number => number % 2 !== 0));         // 3
 
 console.log('\n When the values don\'t exist:');
-console.log(numbers.find(number => number === 500));        // undefined
-console.log(numbers.findIndex(number => number === 500));        // -1
+console.log(numbers.find(number => number === 500));            // undefined
+console.log(numbers.findIndex(number => number === 500));       // -1
