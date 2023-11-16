@@ -1,0 +1,45 @@
+
+
+
+11-13-2023 JS Arrays Methods
+
+RECAP:
+function or method: they are useful and common to use in any programming language as they allow programmer
+to write a block of code once and execute it many times..
+
+function name() {
+    // block to execute
+}
+
+// Invoking a function
+name();
+
+
+Function expression: another way to define functions in JavaScript and we actually creating an anonymous function
+and assingning it to a variable.
+
+const name = function () {
+    // block to execute
+};
+
+// Invoking a function
+name();
+
+
+Arrow function: New syntax of defining functions in JS came with ES6. (ES2015)
+const hello = () => {
+    // block to execute
+};
+
+// Invoking a function
+name();
+
+
+CALLBACK FUNCTION: it is a function used as an argument to another function
+
+
+Array Methods 
+forEach(callbackfunction);
+map(callbackfunction);
+filter(callbackfunction);
+reduce(callbackfunction);

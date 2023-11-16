@@ -1,0 +1,64 @@
+
+
+
+
+11-07-2023 JS Objects Arrays Loops
+
+RECAP:
+Array: is a collection (data-structure) that stores multiple data in a single variable.
+Object: is key-value pairs (properties) and stores information for a real-life object.
+Loop: is used to execute a block of code repeatedly and prevents code duplication. 
+
+
+Author - Object
+first name is 'Stefan'
+last name is 'Zweig'
+
+
+Phone, Microfon, Laptop, Mouse, Sticky Notes, Apple Watch -> 
+
+
+NOTE: We can have array in an object as a value and visa versa. 
+
+TO DO TASK: studying, laundry, cleaning
+
+// Using array as a value for the key of an object
+const student = {
+    firstName: 'John',
+    lastName: 'Doe',
+    age: 25,
+    todo: ['studying', 'laundry', 'cleaning']
+};
+
+console.log(student.todo); // ['studying', 'laundry', 'cleaning']
+console.log(student.todo[1]); // laundry 
+
+
+// Using objects as the elements of an array 
+const students = [ 'Dylan', 'Suzanne', 'Ayca', 'Tolgonai', 'Zaid' ];
+
+Dylan - 20
+Suzanne - 19 
+Ayca - 23 
+Zaid - 15
+Tolgonai - 26
+
+const students = [
+    {
+        name: 'Dylan',
+        age: 20
+    },
+    {
+        name: 'Suzanne',
+        age: 19
+    },
+    {
+
+    },
+    {},
+    {}
+];
+
+
+console.log(students[0].age); // 20
+console.log(students[1].name); // Suzanne

@@ -37,7 +37,7 @@ const appleStore = [
 let mostExpensive = {
     productName: '',
     quantity: 0,
-    price: 0
+    price: 0 
 };
 let leastExpensive = {
     productName: '',

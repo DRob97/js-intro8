@@ -1,0 +1,34 @@
+
+
+
+11-12-2023 JS Arrow Functions & Callback Functions
+
+Write a function that prints 'Hello'
+
+// Regular function syntax
+function printHello() {
+    console.log('Hello');
+}
+
+printHello(); // Hello
+
+
+// Function expression - storing function in a variable
+const printHello = function () {
+    console.log('Hello');
+}
+
+printHello(); // Hello
+
+
+// Arrow function 
+const printHello = () => console.log('Hello');
+
+printHello(); // Hello
+
+
+CALLBACK FUNCTION 
+-It is a function used as an argument of another function.
+
+
+*** What are the differences bt map() vs filter() vs reduce() methods?

@@ -1,0 +1,11 @@
+
+
+11-06-2023 JS Objects
+
+Object functions: the value of a key in an object could be function as well.
+-this keyword in JavaScript refers to the current object.
+
+In JavaScript, functions are also objects.
+
+
+NOTE: Each object key-value pair is known as property or entry.
