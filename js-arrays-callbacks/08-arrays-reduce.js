@@ -24,9 +24,3 @@ const max = numbers.reduce((max, curr) => max = Math.max(max, curr), -Infinity);
 console.log(max);
 const min = numbers.reduce((min, curr) => min = Math.min(min, curr), Infinity);
 console.log(min);
-
-// We will solve the following on Saturday of this week (11/18/23):
-const fruits = ['Apple', 'Orange', 'Kiwi', 'Pineapple', 'Mango', 'Melon'];
-// count how many elements has 'apple' ignoring cases       // 2
-// count how many elements has 'i' ignoring cases           // 2
-// count how many elements ends with 'e' ignoring cases     // 2
