@@ -30,3 +30,9 @@ const countFruitsEndWith_e = fruits.reduce((countFruitsEndWith_e, curFruit) => {
     return curFruit.toLowerCase().endsWith('e') ? countFruitsEndWith_e + 1 : countFruitsEndWith_e;
 }, 0);
 console.log(`The number of elements that end with the letter 'e' is ${countFruitsEndWith_e}`);
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// Akin's Soultions
+/*
+    effectively the same solutions I have but 1 done with a loop as an example
+*/
