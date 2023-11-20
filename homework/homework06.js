@@ -150,3 +150,166 @@ console.log(no3and5([3, 4, 5, 6]));		            // [100, 4, 99, 100]
 console.log(no3and5([10, 11, 12, 13, 14, 15])); 	// [99, 11, 100, 13, 14, 101]
 
 // Task 8
+/*
+Write a function named countPrimes() which takes an array of integer numbers as argument and will return the number of
+the prime numbers in the given array.
+
+NOTE: Prime number is a number that can be divided only by 1 and itself​.
+NOTE: Negative numbers cannot be prime​.
+Examples: 2,3,5,7,11,13,17,19,23,29,31,37 etc.​
+NOTE: Smallest prime number is 2.
+*/
+function countPrimes(arr){                                          // Function called countPrimes which takes an array as an argument
+    let primeCounter = 0;                                           // Initialize a counter to 0
+    for(const element of arr){                                      // for...of loop to go through the array
+        for(let i = 2; i <= element; i++){                          // i-loop to test all numbers between smallest prime number and element
+            if(element % i === 0 && element === i) primeCounter++;  // If element is prime, update counter
+            else if(element % i === 0 && element !== i) break;      // If element is not, break out of nested i loop and continue with next element
+        }
+    }
+    return primeCounter;                                            // return the counter
+}
+
+console.log(countPrimes([-10, -3, 0, 1])); 	        // 0
+console.log(countPrimes([7, 4, 11, 23, 17])); 	    // 4
+console.log(countPrimes([41, 53, 19, 47, 67]));     // 5
+
+// Task 9
+/*Write a function named removeDuplicates() which takes an array argument and returns a new array with all the
+duplicates removed.
+*/
+function removeDuplicates(arr){
+    const noDupes = [];
+    for(const arg of arr){
+        if(!noDupes.includes(arg)) noDupes.push(arg);
+    }
+    return noDupes;    
+}
+
+console.log(removeDuplicates([10, 20, 35, 20, 35, 60, 70, 60])); 		    // [10, 20, 35, 60, 70]
+console.log(removeDuplicates([1, 2, 5, 2, 3])); 			                // [1, 2, 5, 3]
+console.log(removeDuplicates([0, -1, -2, -2, -1])); 			            // [0, -1, -2]
+console.log(removeDuplicates(["abc", "xyz", "123", "ab", "abc", "ABC"])); 	// ["abc", "xyz", "123", "ab", "ABC"]
+console.log(removeDuplicates(["1", "2", "3", "2", "3"])); 		            // ["1", "2", "3"]
+
+// Task 10
+/*
+Write a method named isDateFormatValid() that takes a string as an argument and returns true if the given date is valid
+or returns false otherwise.
+
+Expected Format: nn/nn/nnnn
+So, it must be presented as <2digits>/<2digits>/<4digits>
+*/
+function isDateFormatValid(str){                        // Function called isDateFormatValid which takes a string as an argument
+    let str1 = str.trim();                              // Initialize str1 with the provided string, trimmed
+    if(str1.includes('/')){                             // Check to see if the provided string contains '/''
+        const dateArr = str1.split('/');                // If so, split by '/''
+        if(dateArr[0].length === 2 && dateArr[1].length === 2 &&    // Check to make sure the month and day elements use 2 characters
+            dateArr[2].length === 4 && dateArr.length === 3 &&  // Check to make sure the year is 4 characters and the dateArr contains only 3 elements
+            dateArr[0] <= 12 && dateArr[1] <= 31){      // Make sure the month is 12 or less, and the day 31 or less
+                return true;                            // If the string passes the 6 tests listed above, return true
+        }
+        else return false;                              // else return false
+    }
+    else return false;                                  // If the provided string dose not include '/', return false
+}
+
+console.log(isDateFormatValid(""));      			        // false
+console.log(isDateFormatValid("15/30/2020"));        		// false
+console.log(isDateFormatValid("10-30-2020 "));       		// false
+console.log(isDateFormatValid("10.30.2020"));        		// false
+console.log(isDateFormatValid("5/30/2020"));         		// false
+console.log(isDateFormatValid("05/30/2020 "));       		// true
+console.log(isDateFormatValid("10/2/2020"));         		// false
+console.log(isDateFormatValid("10/02/2020 "));       		// true
+
+// Task 11
+/*
+Write a method named secondMax() takes an array argument and returns the second max number from the array.
+
+NOTE: Assume that you will not be given empty array and if the array has only 1 element, it will be returned as second max number.
+
+NOTE: Be careful when there is multiple max numbers.
+*/
+function secondMax(arr){                        // Function called secondMax which takes an array as an argument
+    let max = Math.max(...arr);                 // Initialize max variable with the maximum value found in the array
+    let sMax = Math.min(...arr);                // Initialize sMax variable with the minimum value found in the array
+    if(arr.length === 1) return arr[0];         // Check array length, if 1, return arr[0]
+    else{                                       // else
+        for(let i = 0; i < arr.length; i++){    // Standard i-loop
+            if(arr[i] > sMax && arr[i] < max) sMax = arr[i];   // If element at arr[i] is greater than the current sMax but less
+        }                                                           // the max, update sMax
+        return sMax;                            // return sMax
+    }
+}
+
+console.log(secondMax([7, 4, 4, 4, 23, 23, 23])); 	// 7
+console.log(secondMax([3, 4, 5, 6]));		        // 5
+console.log(secondMax([10]));		                // 10
+
+// Task 12
+/*
+Write a method named secondMin() takes an array argument and returns the second min number from the array.
+
+NOTE: Assume that you will not be given empty array and if the array has only 1 element, it will be returned as second min number.
+
+NOTE: Be careful when there is multiple min numbers.
+*/
+function secondMin(arr){                                        // Function called secondMin which takes an array as an argument
+    let min = Math.min(...arr);                                 // Initialize min variable with the minimum value found in the array
+    let sMin = Math.max(...arr);                                // Initialize sMin variable with the maximum value found in the array
+    if(arr.length === 1) return arr[0];                         // Check array length, if 1, return arr[0]
+    else{                                                       // else
+        for(let i = 0; i < arr.length; i++){                    // Standard i-loop
+            if(arr[i] > min && arr[i] < sMin) sMin = arr[i];    // If element at arr[i] is greater than the current min but less
+        }                                                           // than the current sMin, update sMin
+        return sMin;                                            // return sMin
+    }
+}
+
+console.log(secondMin([7, 4, 4, 4, 23, 23, 23])); 	// 7
+console.log(secondMin([3, 4, 5, 6])); 		        // 4
+console.log(secondMin([10])); 		                // 10
+
+// Task 13
+/*
+Write a method named mostRepeated() takes an array argument and returns the most counted element from the array.
+
+NOTE: Assume that you will not be given empty array and the count of one element will always be more than the others.
+*/
+function mostRepeated(arr){             // Function called mostRepeated which takes an array as an argument
+    if(arr.length < 2) return arr[0];   // Check length of arr, if less than 2, return arr[0]
+    else{                               // else
+        const arrNoDupes = [];          // Initialize empty array called arrNoDupes
+        const arrObjects = [];          // Initialize empty array called arrObjects
+        const arrObjCounter = [];       // Initialize empty array called arrObjectCounter
+        const arrCopy = arr;            // Initialzed arrCopy as a copy of the argument, arr
+    
+        for(const arg of arrCopy){      // for...of loop to iterate through arrCopy
+            if(!arrNoDupes.includes(arg)) arrNoDupes.push(arg); // If arrNoDupes does not contain the current element in arrCopy,
+        }                                                           // push it. This creates an array with only unique elements
+        for(const arg of arrNoDupes){   // for...of loop to iterate through arrNoDupes
+            const element = {           // Create an element object to keep track of the unique values in arrNoDupes
+                value: arg,             // Assign the value of the current arg to the key 'value'
+                counter: 0              // Assign the key 'counter' the value of 0
+            };
+            arrObjects.push(element);   // Push this newly created object to arrObjects, creating an array of objects
+        }
+        for(const obj of arrObjects){   // for...of loop to iterate through the elements of arrObjects
+            for(arg of arrCopy){        // Nested for...of loop to once again iterate through the elements of arrCopy
+                if(arg === obj.value) obj.counter = obj.counter + 1;  // If the current element of arrCopy shares the same value as the
+            }                                   // 'value' key in the current object in the parent loop, increase the object's counter
+            arrObjCounter.push(obj.counter);    // Push the value of the current object's counter to arrObjCounter
+        }
+        const max = Math.max(...arrObjCounter); // Spread the elements of arrObjCounter into Math.max() to find the largest counter value
+        for(const obj of arrObjects){           // for...of loop to iterate through arrObjects once more
+            if(obj.counter === max) return obj.value;   // If the value attached to the current object's 'counter' key matches the max
+        }                                                   // value, return the value attached to the current object's 'value'key
+    }
+    
+}
+
+console.log(mostRepeated([4, 7, 4, 4, 4, 23, 23, 23])); 			                    // 4
+console.log(mostRepeated(["pen", "pencil", "pen", "123", "abc", "pen", "pencil"])); 	// "pen"
+console.log(mostRepeated([10])); 					                                    // 10
+console.log(mostRepeated(["TechGlobal"])); 				                                // "TechGlobal"
