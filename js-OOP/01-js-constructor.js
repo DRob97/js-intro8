@@ -73,9 +73,9 @@ function Teacher(fName, lName, age, field){
     this.field = field;
 }
 
-const teacher1 = new Teacher('Kyle', 'Barshinger', 32, 'Music');
-const teacher2 = new Teacher('Brie', 'Shadensack', 100, 'English');
-const teacher3 = new Teacher('Brian', 'Luptak', 47, 'P.E.');
+const teacher1 = new Teacher('David', 'Doe', 98, 'Scuba Instructor');
+const teacher2 = new Teacher('Arnold', 'schwarzenegger', 76, 'Gym');
+const teacher3 = new Teacher('Bowser', 'Junior', 13, 'Art');
 
 console.log(teacher1);
 console.log(teacher2);
@@ -90,3 +90,24 @@ console.log(teacher3);
 
 const teachers = [teacher1, teacher2, teacher3];
 const students = [student1, student2, student3, student4, student5];
+
+Teacher.prototype.teach = function(){
+    console.log(`${this.fName} ${this.lName} teaches.`);
+}
+
+Teacher.prototype.giveHomework = function(){
+    console.log(`${this.fName} ${this.lName} gives homework.`);
+}
+
+// Akin's solution
+const oldestTeacher = teachers.reduce((oldest, curr) => oldest.age > curr.age ? oldest : curr, {});
+console.log(oldestTeacher.fName);
+// Akin's solution
+const youngestStudent = students.reduce((youngest, curr) => youngest.age < curr.age ? youngest : curr, {});
+console.log(youngestStudent.fName);
+// Akin's solution
+console.log(students.filter(student => student.lName === 'Smith').length);  // Filter, 3
+console.log(students.reduce((counter, curr) => curr.lName === 'Smith' ? counter + 1 : counter, 0)); // Reduce, 3
+// Akin's solution
+console.log(students.filter(student => student.fName.toLowerCase().includes('a')).length);  // Filter, 4
+console.log(students.reduce((counter, curr) => curr.fName.toLowerCase().includes('a') ? counter + 1 : counter, 0)); // Reduce, 4
