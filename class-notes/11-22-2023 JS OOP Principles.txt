@@ -1,0 +1,90 @@
+
+
+
+11-22-2023 JS OOP Principles
+
+OOP: Object-oriented programming
+Examples: C#, C++, Java
+
+JavaScript is prototype-oriented programming language
+ES6 added classes and JavaScript can also be used to achieve OOP.
+
+BEFORE ES6:
+1. Create a prototype using constructor function and add properties
+function Animal(name, age, color) {
+    this.name = name;
+    this.age = age;
+    this.color = color;
+}
+
+2. Add functions to your prototype
+Animal.prototype.eat = function (){
+    //body
+}
+
+3. Create many objects from its prototype
+const dog = new Animal('Fido', 3, 'Brown');
+
+// Access and execute the prototype properties and functions
+dog.name; // 
+dog.eat(); //
+
+AFTER ES6
+1. Create a class
+2. Create a constructor within the class with the properties
+3. Define all the functions within class
+
+class Animal{
+    constructor(name, age, color) {
+        this.name = name;
+        this.age = age;
+        this.color = color;
+    }
+    eat() {
+        // body
+    }
+}
+
+4. Create many objects from its prototype
+const dog = new Animal('Fido', 3, 'Brown');
+
+// Access and execute the prototype properties and functions
+dog.name; // 
+dog.eat(); //
+
+
+OOP Principles 
+1. Encapsulation: breaking direct access to object properties/fields/states and providing an indirect access
+    Encapsulation increases the privacy of the properties 
+
+2. Inheritance: it is making the code more reusable as it allows inheriting parent class or prototype to child class or object
+
+3. Abstraction: Providing functionality but hiding the implementation
+
+4. Polymorphism: One object being able to get many shapes 
+
+
+INHERITANCE: incresing code reusability thru prototype chaining (Before ES6), parent-child relationship (ES6)
+-> BEFORE ES6: JS used to do inheritance with Object.create() or prototypal inheritance. 
+In these, a child prototype object will be able to inherit from parent prototype object.
+
+-> AFTER ES6: JS provides classes and inheritance like other OOP languages.
+You can inherit from parent class to child class with the 'extends' keyword
+
+RULES:
+-Only child class can inherit from parent (same rule as before ES6)
+-A child class can inherit only from one direct parent class. (Chaining is still possible).
+-A parent class can be extended by many child classes.
+
+Constructor: is a special type of function used to create objects.
+
+
+ES6 Class GETTERS and SETTERS
+Getters: are used to get properties of an object
+Getters are mostly return type methods and usually they do not take argument unless necessary
+
+Setters: are used to set properties of an object
+Setters are mostly void type (not returning) and they mostly take arguments to be set as the new information
+
+ADVANTAGES OF GETTERS AND SETTERS
+-They provide programmer better control mechanism to access information and update information

@@ -1,0 +1,68 @@
+
+
+11-18-2023 JS Scope - Closure - Hoisting - Currying
+ES6 release happened in 2015. (ES2015)
+-var is replaced with 2 new reserved keywords - let & const
+
+
+var: used before ES6
+let: is an ES6 feature and used for variables that you would like to reassign later
+const: is an ES6 feature and used for constants meaning the value of the variable cannot be changed.
+
+var-let-const
+-var is hoisted, let and const are not hoisted.
+
+
+let: mutable
+const: immutable
+
+
+Scope-Closure-Hoisting
+-All are used and telling us information about the accessibility of the variables.
+-{} -> this is known as a block and usually it holds a few lines of code
+    Examples: if-else, loops, functions, switch
+
+
+// Global Scope
+var x = 10;
+let y = 11;
+const z = 12;
+
+
+// Block Scope 
+{
+    var x = 10;
+    let y = 11;
+    const z = 12;
+}
+
+
+// Function Scope
+function funcName() {
+    var x = 10;
+    let y = 11;
+    const z = 12;    
+}
+
+
+// Lexical Scope - nested functions
+-In case you have nested functions;
+    The inner function can access the outer function variables 
+    However, the outer function cannot access the inner function variables 
+-Same rule applies to all var, let and const variables.
+
+
+Hoisting: is a concept that JS moves variable declarations to the top of the file and allows you to access the 
+variable reference but not the value.
+Functions can also be hosited unless they are stored in a variable using function expression or arrow functions.
+
+-var keyword can be hoisted but let and const cannot be hoisted.
+-Functions that are created with regular syntax will be hoisted and can be used anywhere within the file with no issues.
+However, function expressions and arrow functions are not hoisted and can only be used after they are created.
+
+
+
+*** Interview Questions
+What is hoisting?
+What is scope? Tell me about different scopes.
+What is closure and why is it used?

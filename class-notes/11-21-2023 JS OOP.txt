@@ -1,0 +1,136 @@
+
+
+
+
+11-21-2023 JS OOP
+
+OOP: Object-oriented programming used to put real life object into programming and it allows programmer 
+to break down the big problems into smaller pieces.
+
+
+Facebook - Meta
+3 billion 
+
+const user1 = {
+    personalInfo: {
+
+    },
+    posts: [
+        {
+            type: ,
+            time: ,
+            likes: ,
+            comments: [
+                {user:
+
+                },
+
+            ]
+        },
+        {}
+   ]
+}
+
+BEFORE ES6
+- Creating PROTOTYPE with the help of constructor:
+- It is a special function (constructor function) that allows us to declare a prototype which will 
+eventually help us to create many similar objects from.
+- Constructor is always used together with the new keyword to create an object of that prototype.
+- new keyword: it is a reserved keyword used to create an object 
+
+Object - decide two things
+What the object has? -> Properties/fields/states/instance variables
+What the object does? -> Methods/functions
+
+// Constructor function - Prototype
+function Car(year, make, model, color, price) {
+    this.year = year; // 2023
+    this.make = make; // Tesla
+    this.model = model;
+    this.color = color;
+    this.price = price;
+}
+
+Car.prototype.drive = function () {
+    // body
+}
+
+// Creating objects from the Car constructor / Car Prototype 
+const car1 = new Car(2023, 'Tesla', 'X', 'White', 80000);
+const car2 = new Car(2023, 'BMW', 'X8', 'Black', 100000);
+
+console.log(car2.color); // Black
+console.log(car1.model); // X 
+console.log(car1.price); // 80000 
+
+car1.drive();
+car2.drive();
+
+
+// If you were to create only a single a car object 
+const car1 = {
+    year: 2023,
+    make: 'Tesla',
+    model: 'X',
+    color: 'White',
+    price: 80000,
+    drive: function () {
+        // body
+    }
+};
+
+const car2 = {
+    year: 2023,
+    make: 'BMW',
+    model: 'X8',
+    color: 'Black',
+    price: 100000,
+    drive: function () {
+        // body
+    }
+};
+
+
+// Regular function
+function sum(x, y) {
+    // body to run a task
+}
+
+
+sum(3, 5);
+
+function Car()(year, make, model, color, price){
+    this.year = year; 
+    this.make = make;
+    this.model = model;
+    this.color = color;
+    this.price = price;
+}
+
+Car.prototype.drive = function() {
+    // block
+}
+
+
+class Car {
+    constructor(year, make, model, color, price){
+        this.year = year; 
+        this.make = make;
+        this.model = model;
+        this.color = color;
+        this.price = price;
+    }
+    drive() {
+        // body
+    }
+}
+
+// Creating objects from the Car class using its constructor
+const car1 = new Car(2023, 'Tesla', 'X', 'White', 80000);
+const car2 = new Car(2023, 'BMW', 'X8', 'Black', 100000);
+
+car1.drive();
+car2.drive();
+
+car1.year; // 2023
+car2.color; // Black
