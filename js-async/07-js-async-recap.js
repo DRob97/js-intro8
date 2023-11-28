@@ -79,3 +79,31 @@ function test1(){
 }
 
 test1();
+
+// Async await
+function goToURL(){
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            if(Math.floor(Math.random() * 2)) resolve('URL is loaded!');
+            else reject('Website is broken');
+        }, 2000);
+    });
+}
+
+function validateMainHeading(){
+    const actualText = 'Looking to pursue a new career?';  // You will learn how to get this later
+    const expectedText = 'Looking to pursue a new career?'; // Given in requirements
+    if(expectedText === actualText) console.log('Validation is successful!');
+    else console.log('Validation failed');
+}
+
+async function test1(){
+    try{
+        await goToURL();
+    validateMainHeading();
+    } catch(err){
+        console.log(err);
+    }
+}
+
+test1();
