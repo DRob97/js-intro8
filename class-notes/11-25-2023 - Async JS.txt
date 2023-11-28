@@ -1,0 +1,50 @@
+
+
+
+11-25-2023 Asynchronous JavaScript 
+
+-Happening at the same time
+-Without order
+-Not synced
+
+
+HEAP vs STACK (Call Stack)
+-Call Stack stores all the primitive variables with their values
+-Call stack stores references of objects 
+-Heap stores all the reference objects
+-Functions are stored in the stack and will be executed with rule LIFO (last in first out)
+
+NOTE: Stack and Heap will are created when a program started and will be destroyed after execution completed and will be 
+ready for the next program.
+
+
+-JS is single-threaded and will execute code in a file line by line 
+-It is not possible to run multiple program at the same time
+
+
+EVENT LOOP
+-The event loop allows Node.js to perform non-blocking I/O operations despite the fact that JavaScript is single-threaded. 
+-It is done by assigning operations to the operating system whenever and wherever possible. 
+-Most operating systems are multi-threaded and hence can handle multiple operations executing in the background. 
+-When one of these operations is completed, and the respective callback assigned to that operation is added to the event queue which will eventually be executed.
+
+Features of Event Loop:
+-An event loop is an endless loop, which waits for tasks, executes them, and then sleeps until it receives more tasks.
+-The event loop executes tasks from the event queue only when the call stack is empty i.e. there is no ongoing task.
+-The event loop allows us to use callbacks and promises.
+-The event loop executes the tasks starting from the oldest first.
+
+
+setTimeOut() -> we can use this function to slow down some part of our programs.
+It takes 2 arguments;
+    1. callback
+    2. time as milliseconds 
+    5000 -> 5 seconds
+
+
+JavaScript is asynchronous by its nature and that could cause logical issues for the events you would like do 
+on a web browser or on an application. (Unexpected order due to delays)
+However, JS allows us to synchronize the events we would like execute in order. (ordered explicitly)
+    1. callbacks (BEFORE ES6) - callback hell
+    2. promises (AFTER ES6)
+    3. async - await keywords (AFTER ES6)

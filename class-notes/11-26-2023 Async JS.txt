@@ -1,0 +1,67 @@
+
+
+
+11-26-2023 Asynchronous JavaScript 
+
+
+JavaScript is Asynchronous and it provides 3 different ways to handle Asynchronous code.
+
+1. callbacks (BEFORE ES6)
+2. promises 
+3. async-await 
+
+
+
+1. CALLBACKS 
+-Callbacks are functions that you pass as arguments to another function and are executed once the 
+asynchronous operation is complete. 
+-Callbacks have been a traditional way to handle asynchronous code in JavaScript.
+
+
+Nested Callbacks & Callback Hell 
+-It is a term used to describe a situation where multiple nested callback functions make the code structure 
+difficult to read, understand, and maintain. 
+-It typically occurs in asynchronous JavaScript code when you have many nested callback functions, 
+each depending on the result of the previous one. 
+-This can lead to code that looks like a pyramid or a deep indentation structure, 
+hence the term "Pyramid of Doom”.
+
+
+Error Handling with CallBacks
+-Error handling for callbacks in JavaScript is a crucial aspect of writing robust and reliable asynchronous code. 
+-When using callbacks, especially in asynchronous operations, errors can occur at various stages. 
+-Proper error handling ensures that your program can gracefully handle and recover from errors and 
+prevents unexpected crashes.
+
+
+2. PROMISES 
+-Promises are a more modern and structured way to handle asynchronous code. 
+-They represent a value that might be available now, in the future, or never. 
+-Promises provide methods like .then() to attach success and error handlers to execute when the asynchronous operation completes or fails.
+
+States or Properties of Promise Object:
+-Pending: Initial state, neither fulfilled nor rejected.
+-Fulfilled: Meaning that the operation completed successfully, and a result is available.
+-Rejected: Meaning that an error occurred, and an error reason is available.
+
+            Promise 
+
+            pending
+       success   rejected
+
+-Promises can be chained together to represent a sequence of asynchronous operations. 
+-Each .then() or .catch() call returns a new Promise, allowing you to compose complex asynchronous flows.
+
+
+
+
+
+Error Handling with Promises
+-Promises can be in one of three states: pending, fulfilled, or rejected.
+        -When a Promise is fulfilled, it means the asynchronous operation completed successfully.
+        -When a Promise is rejected, it means an error occurred during the operation.
+.then() and .catch():
+        -You use the .then() method to handle the successful resolution of a Promise. 
+            It takes a success callback function as its argument.
+        -You use the .catch() method to handle errors or rejections in a Promise. 
+            It takes an error callback function as its argument.

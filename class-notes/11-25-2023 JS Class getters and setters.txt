@@ -1,0 +1,36 @@
+
+
+
+11-25-2023 JS Class getters and setters
+
+ES6 Class GETTERS and SETTERS
+Getters: are used to get properties of an object
+Getters are mostly return type methods and usually they do not take argument unless necessary
+
+Setters: are used to set properties of an object
+Setters are mostly void type (not returning) and they mostly take arguments to be set as the new information
+
+ADVANTAGES OF GETTERS AND SETTERS
+-They provide programmer better control mechanism to access information and update information
+
+
+Class: is a template-blueprint can be used to create many objects 
+Objects: they are instances of their classes 
+
+Class: Person
+Object: Suzanne, Ayca, John
+
+Object Properties
+-if each object has different information for one property like name - this should be non-static -> Ayca, Suzanne, John
+-if a behavior differs for objects like sound, walk, run -> this should be non-static -> Ayca, Suzanne, John
+-Every object shares the same info -> static property - belongs to class -> we have 2 eyes
+-Every object have a feature -> static function -> belongs to class -> breath
+
+Static members belong to class and can only be accessed with the className
+Syntax: Class.property or Class.function() 
+-Static members cannot be accessed with the objects 
+
+Non-static members belong to the objects and can only be accessed with the objects created 
+Syntax: const obj = new Class();
+        obj.property or obj.function()
+-Non-static members cannot be accessed with the className
