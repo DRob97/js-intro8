@@ -77,8 +77,8 @@ Find and return the last name of all students who are over 20   // [Doe, Smith, 
 console.log(students.reduce((result, curr) => curr.gender === 'M' ? result + 1 : result, 0));
 console.log(students.reduce((result, curr) => curr.gender === 'F' ? result + 1 : result, 0));
 
-console.log(students.filter(student => student.className === 'Math').length);   // Change to reduce
-console.log(students.filter(student => student.className === 'Science').length);    // Change to reduce
+console.log(students.reduce((result, curr) => curr.className === 'Math' ? result + 1 : result, 0));
+console.log(students.reduce((result, curr) => curr.className === 'Science' ? result + 1 : result, 0));
 
 const oldestWithReduce = students.reduce((oldest, student) => oldest.age > student.age ? oldest : student, students[0]);
 console.log(`${oldestWithReduce.fName} ${oldestWithReduce.lName} is the oldest with the age of ${oldestWithReduce.age}`);
@@ -86,5 +86,8 @@ console.log(`${oldestWithReduce.fName} ${oldestWithReduce.lName} is the oldest w
 const youngestWithReduce = students.reduce((youngest, student) => youngest.age < student.age ? youngest : student, students[0]);
 console.log(`${youngestWithReduce.fName} ${youngestWithReduce.lName} is the youngest with the age of ${youngestWithReduce.age}`);
 
-console.log(students.reduce((total, student) => student.age > 0 ? total + student.age : total, 0) / students.length);
+console.log(students.reduce((total, student) => student.age > 0 ? total + student.age : total, 0) / students.length);   // Do not need ternery here, could just pust total + student.age after the arrow
 
+console.log(students.filter(student => student.className === 'Math').map(student => student.fName + ' ' + student.lName));
+console.log(students.filter(student => student.gender === 'M').map(student => student.fName));
+console.log(students.filter(student => student.age > 20).map(student => student.lName));

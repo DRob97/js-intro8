@@ -171,3 +171,18 @@ async function main(){
 
 main();
 //*/
+// Alan's solution to part 3, posted to slack general
+updateQuantity(pName, newQty) {
+    return new Promise((resolve) => {
+      setTimeout(() => {
+        const productToUpdate = this.cart.find((p) => p.name === pName);
+        if (productToUpdate) {
+          productToUpdate.quantity = newQty;
+          console.log(`${pName} quantity updated to ${newQty}.`);
+        } else {
+          console.log(`${pName} not found in the cart.`);
+        }
+        resolve();
+      }, 1000);
+    });
+  }
