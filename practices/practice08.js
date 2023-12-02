@@ -171,6 +171,7 @@ async function main(){
 
 main();
 //*/
+/*
 // Alan's solution to part 3, posted to slack general
 updateQuantity(pName, newQty) {
     return new Promise((resolve) => {
@@ -186,3 +187,4 @@ updateQuantity(pName, newQty) {
       }, 1000);
     });
   }
+  //*/
