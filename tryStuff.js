@@ -1,15 +1,21 @@
-const reverseSentence = function(str){
-    const newArr = str.toLowerCase().split(' ');
-    if(newArr.length > 1){
-        const backwards = newArr.reverse();
-        let firstWord = backwards[0];
-        firstWord = firstWord.replace(firstWord[0], firstWord[0].toUpperCase());
-        backwards[0] = firstWord;
-        return backwards.join(' ');
+const noXInVariables = (arr) => {
+    const result = [];
+    for(const element of arr){
+        if(isNaN(element)) {
+            if(element.includes('x') || element.includes('X')){
+                let newElement = element.replaceAll('x', '');
+                newElement = newElement.replaceAll('X', '');
+                if(newElement.length >= 1) result.push(newElement);
+                else continue;
+            }
+            else result.push(element);
+        }
+        else result.push(element);
     }
-    else return 'There is not enough words!';
+    return result;
 }
 
-console.log(reverseSentence("Hello")); 		            // "There is not enough words!"
-console.log(reverseSentence("Javascript is fun")); 		// "Fun is javascript"
-console.log(reverseSentence("This is a sentence")); 	// "Sentence a is this"
+console.log(noXInVariables(["abc", 123, "#$%"])); 		// ["abc", 123, "#$%"]
+console.log(noXInVariables(["xyz", 123, "#$%"])); 		// ["yz", 123, "#$%"]
+console.log(noXInVariables(["x", 123, "#$%"])); 	    // [123, "#$%"]
+console.log(noXInVariables(["xyXyxy", "Xx", "ABC"]));	// ["yyy", "ABC"]

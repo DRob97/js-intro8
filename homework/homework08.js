@@ -116,7 +116,7 @@ Write a function named removeArraySpecialsDigits() which takes a string array as
 back without the special characters or digits.
 */
 console.log('<-------Task 7------->');
-const removeArraySpecialsDigits = (arr) => {                                // Could join from the start with spaces, push spaces as well, and then split by spaces
+const removeArraySpecialsDigits = (arr) => {                                // Could maybe join from the start with spaces, push spaces as well, and then split by spaces
     const arr2 = [];
     for(const str of arr){
         const arr3 = [];
@@ -140,10 +140,14 @@ Write a function named getCommons() which takes two string arrays as arguments a
 */
 console.log('<-------Task 8------->');
 const getCommons = (arr1, arr2) => {
-
+    const arr3 = [];
+    arr1.filter(element => {
+        if(arr2.includes(element) && !arr3.includes(element)) arr3.push(element);
+    });
+    return arr3;
 }
 
-console.log(getCommons( ["Javascript", "is", "fun"], ["abc", "xyz", "123"] )); 		    // []
+console.log(getCommons( ["Javascript", "is", "fun"], ["abc", "xyz", "123"] )); 		        // []
 console.log(getCommons( ["Javascript", "is", "fun"], ["Javascript", "C#", "Python"] )); 	// ["Javascript"]
 console.log(getCommons( ["Javascript", "C#", "C#"], ["Python", "C#", "C++"] )); 	        // ["C#"]
 
@@ -153,6 +157,23 @@ Write a function named noXInVariables() which takes an array as argument and ret
 NOTE: If the element is existing of x or X letters only, then completely remove the element.
 */
 console.log('<-------Task 9------->');
+const noXInVariables = (arr) => {
+    const result = [];
+    for(const element of arr){
+        if(isNaN(element)) {
+            if(element.includes('x') || element.includes('X')){
+                let newElement = element.replaceAll('x', '');
+                newElement = newElement.replaceAll('X', '');
+                if(newElement.length >= 1) result.push(newElement);
+                else continue;
+            }
+            else result.push(element);
+        }
+        else result.push(element);
+    }
+    return result;
+}
+
 console.log(noXInVariables(["abc", 123, "#$%"])); 		// ["abc", 123, "#$%"]
 console.log(noXInVariables(["xyz", 123, "#$%"])); 		// ["yz", 123, "#$%"]
 console.log(noXInVariables(["x", 123, "#$%"])); 	    // [123, "#$%"]
