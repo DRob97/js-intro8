@@ -23,6 +23,7 @@ Write a function named noZero() which takes an array of numbers as argument and
 returns the array back with all zeros removed.
 */
 const noZero = (arr) => arr.filter(x => x !== 0);
+
 console.log(noZero([1]));              // [1]
 console.log(noZero([1, 1, 10]));      // [1, 1, 10]​
 console.log(noZero([0, 1, 10]));      // [1, 10]
@@ -82,3 +83,49 @@ console.log(reverseSentence("Javascript is fun")); 		// "Fun is javascript"
 console.log(reverseSentence("This is a sentence")); 	// "Sentence a is this"
 
 // Task 6
+/*
+Write a function named removeStringSpecialsDigits() which takes a string as argument and return a
+string without the special characters or digits.
+*/
+const removeStringSpecialsDigits = (str) => {
+    const arr = [];
+    for(const char of str){
+    if(char.charCodeAt() >= 65 && char.charCodeAt() <= 90 ||
+    char.charCodeAt() >= 97 && char.charCodeAt() <= 122||
+    char.charCodeAt() === 32){
+        arr.push(char);
+    }
+    }
+    return arr.join('');
+}
+
+console.log(removeStringSpecialsDigits("123Javascript #$%is fun")); 	// "Javascript is fun" 
+console.log(removeStringSpecialsDigits("Cypress")); 		            // "Cypress"
+console.log(removeStringSpecialsDigits("Automation123#$%")); 	        // "Automation"
+
+
+// Task 7
+/*
+Write a function named removeArraySpecialsDigits() which takes a string array as argument and return back without the special characters or digits.
+*/
+console.log(removeArraySpecialsDigits(["123Javascript", "#$%is", "fun"])); 	// ["Javascript", "is", "fun"]
+console.log(removeArraySpecialsDigits(["Cypress", "123$%", "###"])); 	        // ["Cypress", "", ""]
+console.log(removeArraySpecialsDigits(["Automation", "123#$%tool"])); 	    // ["Automation", "tool"]
+
+// Task 8
+/*
+Write a function named getCommons() which takes two string arrays as arguments and returns all the common words.
+*/
+console.log(getCommons( ["Javascript", "is", "fun"], ["abc", "xyz", "123"] )); 		    // []
+console.log(getCommons( ["Javascript", "is", "fun"], ["Javascript", "C#", "Python"] )); 	// ["Javascript"]
+console.log(getCommons( ["Javascript", "C#", "C#"], ["Python", "C#", "C++"] )); 	        // ["C#"]
+
+// Task 9
+/*
+Write a function named noXInVariables() which takes an array as argument and return an array that all the x or X removed from the elements. 
+NOTE: If the element is existing of x or X letters only, then completely remove the element.
+*/
+console.log(noXInVariables(["abc", 123, "#$%"])); 		// ["abc", 123, "#$%"]
+console.log(noXInVariables(["xyz", 123, "#$%"])); 		// ["yz", 123, "#$%"]
+console.log(noXInVariables(["x", 123, "#$%"])); 	    // [123, "#$%"]
+console.log(noXInVariables(["xyXyxy", "Xx", "ABC"]));	// ["yyy", "ABC"]
