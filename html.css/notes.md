@@ -58,3 +58,34 @@ If element doesn't have any content, you can self-close it.
 ### Link element '<a>'
 Used to navigate between or out of the web page.
 When 'target="_blank"' attr added website
+
+## Attributes
+
+### ID
+Used for unique elements
+
+### Class
+Used for common/multiple elements
+
+## Syling
+1. Inline styling: You apply styles right to the element
+2. Internal styling: You apply styles in the head element
+3. External styling: Apply styles by creating '.css' files
+
+**padding**: give space between content and border
+**margin**: give space between border and other elements
+To style ID use '#'
+To style Class use '.'
+To styles normal element without attribute, use tag name. Ex: 'footer {styles...}'
+
+## Lists
+1. Ordered list 'ol'
+2. Unordered list 'ul'
+3. Both of them have 'li' children elements
+
+## Tables
+'table' - required parent element
+'thead', 'tbody', or 'tfoot' - optional elements that help make code more readable?
+'tr' - table row
+'th' - table heading
+'td' - table data
