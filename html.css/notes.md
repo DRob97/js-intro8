@@ -89,3 +89,13 @@ To styles normal element without attribute, use tag name. Ex: 'footer {styles...
 'tr' - table row
 'th' - table heading
 'td' - table data
+
+## HTML Forms
+Used to collect data from users
+'form' - element to create a form
+'input' element:
+    'type-text' - used to collect text data from user. It is a self closing element
+    'type-email' - collect email data from user
+    'type-password'- collect password data from user
+'button' - we can use button element to submit form data
+'label' - an element label for inputs
