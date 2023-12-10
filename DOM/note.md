@@ -56,3 +56,30 @@ Every DOM node has the innerHTML property
 innerHTML has all the HTML and content of its children
 It can be used to view of change the HTML of a code
 You can also use 'innerText' or 'textContent' similarly
+
+
+## Traversing DOM
+DOM tree contains all kinds of nodes:
+    Elements, whitespaces, comments, etc.
+
+#### childNodes
+Returns NodeList of al nodes
+
+#### children
+Returns HTMLCollection of only elements
+    (no whitespace, comments...)
+
+#### Other useful node methods
+firstChild, lastChild
+previousSibling, nextSibling
+
+#### Other useful element methods
+firstElementChild, lastElementChild
+previousElementSibling, nextElementSibling
+
+## Create element in the DOM
+'createElement'
+To add a content to a newly created element use either 'innerHTML' or 'document.createTextNode()' with 'append()'
+
+## appendChild vs append
+both allow you to append nodes, but append also allows you to append strings as well as  multiple nodes at once
