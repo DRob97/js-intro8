@@ -189,7 +189,7 @@ console.log(swapFirstLastWord(""));                     // ""
 console.log(swapFirstLastWord(" "));                    // ""
 console.log(swapFirstLastWord("Hello"));                // ""
 console.log(swapFirstLastWord("Hello "));               // ""
-///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
 //////////////////////////////////////////// Second Section Uses Function Expression Notation ////////////////////////////////////////////
 /*
 Count Positive Numbers
