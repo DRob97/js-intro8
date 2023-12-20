@@ -91,7 +91,7 @@ function averageOfEdges(x, y, z){
     const max = Math.max(x, y, z);
     const min = Math.min(x, y, z);
 
-    return (max + min) / 2
+    return (max + min) / 2;
 }
 
 console.log(averageOfEdges(0, 0, 0));    // 0
@@ -321,6 +321,7 @@ const count3OrLess = (str) => {
     const strArr = str.split(' ');
     return strArr.reduce((lilWord, curr) => curr.length <= 3 ? lilWord + 1 : lilWord, 0);
 }
+
 console.log(count3OrLess("Hello")); // 0
 console.log(count3OrLess("Hi John")); // 1
 console.log(count3OrLess("JavaScript is fun")); // 2
@@ -380,6 +381,7 @@ const firstDuplicate = (arr) => {
     }
     return -1;
 }
+
 console.log(firstDuplicate([ 3, 7, 10, 0, 3, 10 ])); // 3
 console.log(firstDuplicate([ 5, 7, 7, 0, 5, 10 ])); // 5
 console.log(firstDuplicate([ 5, '5', 3, 7, 4 ])); // -1
@@ -555,7 +557,7 @@ Examples: 2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31…
 NOTE: The smallest prime number is 2 and there is no negative prime numbers.
 */
 const isPrime = (num) => {
-    if(num < 2)return false;
+    if(num < 2) return false;
     for(let i = 2; i < num; i++){
         if(num % i === 0) return false;
     }
@@ -577,6 +579,7 @@ array with sum of given arrays elements.
 
 NOTE: Be careful about the array sizes as they could be different.
 */
+// I believe my solution could be greatly improved
 const add = (arr1, arr2) => {       ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     const sumArr = [];              ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     let longerArr, shorterArr;      ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -607,21 +610,11 @@ No Elements With A
 Write a function named noA() which takes an array of strings as argument and will return a
 new array with all elements starting with "A" or "a" replaced with "###".
 */
-const noA = (arr) => {
-    for(let i = 0; i < arr.length; i++){
-        if(arr[i].toLowerCase().startsWith('a')){
-            arr[i] = '###';
-        }
-    }
-    return arr;
-}
+const noA = (arr) => arr.map(x => 'Aa'.includes(x[0]) ? x = '###' : x);
 
 console.log(noA(["javascript", "hello", "123", "xyz"])); // ["javascript", "hello", "123", "xyz"]
 console.log(noA(["apple", "123", "ABC", "javascript"])); // ["###", "123", "###", "javascript"]
 console.log(noA(["apple", "abc", "ABC", "Alex", "A"])); // ["###", "###", "###", "###", "###"]
-
-
-
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 /*
 No Elements Divisible By 3 and 5
@@ -631,6 +624,15 @@ If element can be divided by 5, replace it with 99
 If element can be divided by 3, replace it with 100
 If element can be divided by both 3 and 5, replace it with 101
 */
+const no3and5 = (arr) => {
+    return arr.map(x => {
+        if(x % 15 === 0) return x = 101;
+        else if(x % 5 === 0) return x = 99;
+        else if(x % 3 === 0) return x = 100;
+        else return x;
+    })
+}
+
 console.log(no3and5([7, 4, 11, 23, 17])); // [7, 4, 11, 23, 17]
 console.log(no3and5([3, 4, 5, 6])); // [100, 4, 99, 100]
 console.log(no3and5([10, 11, 12, 13, 14, 15])); // [99, 11, 100, 13, 14, 101]
@@ -640,6 +642,8 @@ No Elements Equals 13
 Write a function named no13() which takes an array of numbers as argument and return a new
 array with all 13s replaced with 0s.
 */
+const no13 = (arr) => arr.map(x => x === 13 ? 0 : x);
+
 console.log(no13([1, 2, 3 ,4])); // [1, 2, 3 ,4]
 console.log(no13([13, 2, 3])); // [0, 2, 3]
 console.log(no13([13, 13, 13 , 13, 13])); // [0, 0, 0, 0, 0]
@@ -650,6 +654,8 @@ Remove Duplicates
 Write a function named removeDuplicates() which takes an array argument and returns a new
 array with all the duplicates removed.
 */
+const removeDuplicates = (arr) => arr.filter((x, index) => arr.indexOf(x) === index);
+
 console.log(removeDuplicates([10, 20, 35, 20, 35, 60, 70, 60])); // [10, 20, 35, 60, 70]
 console.log(removeDuplicates([1, 2, 5, 2, 3])); // [1, 2, 5, 3]
 console.log(removeDuplicates([0, -1, -2, -2, -1])); // [0, -1, -2]
@@ -661,6 +667,8 @@ No Digits
 Write a function named noDigit() which takes a string argument and returns a new string with
 all digits removed from the original string.
 */
+const noDigit = (str) => str.split('').filter(x => !'1234567890'.includes(x)).join('');
+
 console.log(noDigit("")); // ""
 console.log(noDigit("Javascript")); // "Javascript"
 console.log(noDigit("123Hello")); // "Hello"
@@ -672,6 +680,8 @@ No Vowel
 Write a function named noVowel() which takes a string argument and returns a new string
 with all vowels removed from the original string.
 */
+const noVowel = (str) => str.split('').filter(x => !'aeiouAEIOU'.includes(x)).join('');
+
 console.log(noVowel("TechGlobal")); // "TchGlbl"
 console.log(noVowel("AEOxyz")); // "xyz"
 console.log(noVowel("Javascript")); // "Jvscrpt"
@@ -683,6 +693,8 @@ Sum Of Digits
 Write a function named sumOfDigits() which takes a string argument and returns sum of all
 digits from the original string.
 */
+const sumOfDigits = (str) => str.split('').reduce((sum, curr) => '1234567890'.includes(curr) ? sum + parseInt(curr) : sum, 0);
+
 console.log(sumOfDigits("Javascript")); // 0
 console.log(sumOfDigits("John's age is 29")); // 11
 console.log(sumOfDigits("$125.0")); // 8
@@ -693,6 +705,20 @@ Array Factorial
 Write a function named arrFactorial() which takes an array of numbers as argument and return
 the array with every number replaced with their factorials.
 */
+const arrFactorial = (arr) => {
+    const factArr = [];
+    for(const x of arr){
+        let i = x;
+        let product = 1;
+        do{
+            if(i >= 1) product *= i;
+            i--;
+        }while(i >= 1);
+        factArr.push(product);
+    }
+    return factArr;
+}
+
 console.log(arrFactorial([1, 2, 3 ,4])); // [1, 2, 6, 24]
 console.log(arrFactorial([0, 5])); // [1,120]
 console.log(arrFactorial([5 , 0, 6])); // [120, 1, 720]
