@@ -465,8 +465,8 @@ NOTE: A letter that is not vowel is considered as a consonant letter.
 */
 const countConsonants = (str) => {
     if(!str) return 0;
-    const strArr = str.trim().split('');
-    return strArr.reduce((consCount, curr) => !'aeiou'.includes(curr) ? consCount + 1 : consCount, 0);
+    const strArr = str.trim().toLowerCase().split('');
+    return strArr.reduce((consCount, curr) => !'aeiou'.includes(curr) && curr !== ' ' ? consCount + 1 : consCount, 0);
 }
 console.log(countConsonants("Hello")); // 3
 console.log(countConsonants("Hello World")); // 8
