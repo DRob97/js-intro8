@@ -1,20 +1,8 @@
-var pokemon = {
-    firstname: 'Pika',
-    lastname: 'Chu ',
-    getPokeName: function() {
-        var fullname = this.firstname + ' ' + this.lastname;
-        return fullname;
-    }
+const produce = {
+    apple: 2.00,
+    orange: 3.29,
+    mango: 4.99,
+    pineapple: 5.25
 };
 
-// console.log(pokemon.getPokeName());
-
-var pokemonName = function() {
-    console.log(this.getPokeName() + 'I choose you!');
-};
-
-var logPokemon = pokemonName.bind(pokemon); // creates new object and binds pokemon. 'this' of pokemon === pokemon now
-
-logPokemon(); // 'Pika Chu I choose you!'
-
-Dylannnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnn
+total += (item * produce[item]);
