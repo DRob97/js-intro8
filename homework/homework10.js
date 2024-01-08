@@ -87,10 +87,11 @@ Write a function named nthWord() which takes a string and a number arguments and
 Note:
 Function should return empty string if the number argument is greater than the count of the words in the given string.
 */
-const nthWord = (str, num) => {
-    const strArr = str.split(' ');
-    if(strArr.length >= num) return strArr[num - 1];
-    else return '';
+const nthWord = (str, num) => {                         // Arrow funciton which takes a string and a number as arguments
+    const strArr = str.split(' ');                      // Array initialized with the given string, split by whitespace
+    if(strArr.length >= num) return strArr[num - 1];    // If statement to check if array length is greater than the given number;
+                                                            // if so return the element that corresponds with the number
+    else return '';                                     // Else, return an empty string
 }
 
 console.log(nthWord("I like programming languages", 2)); 	    // "like"
@@ -117,6 +118,17 @@ number of digits, equals the original number.​
 In this case, the sum of the individual digits raised to the power of 3 (the number of digits in 153) is equal to the
 original number, which means 153 is an armstrong number.
 */
+const isArmstrong = (num) => {                          // Arrow function which takes a number argument
+    const nStr = num.toString();                        // New variable to store the number converted to a string
+    const nArr = nStr.split('');                        // New array to store the string-number, split by nothing
+    let sum = 0;                                        // Sum, initialized to 0
+
+    for(const number of nArr){                          // For...of loop to iterate through the array
+        sum += Number.parseInt(number)**nArr.length;    // Update the sum in an attempt to make an armstrong number
+    }
+    return sum === num;                                 // Return whether or not the number and sum are a match
+}
+
 console.log(isArmstrong(153)); 	    // true
 console.log(isArmstrong(123)); 	    // false
 console.log(isArmstrong(1634)); 	// true
@@ -131,6 +143,21 @@ to a String.
 Note:
 Do not convert number to string to complete the task.
 */
+const reverseNumber = (num) => {                    // Arrow function taking a number argument
+    const numReversed = [];                         // Container array
+    let reversedNum = 0;                            // Storage for reversed number, functions like a sum
+
+    while(num > 0){                                 // While loop to iterate as long as the number is greater than 0
+        numReversed.unshift(num % 10);              // Get the smallest whole digit and put it in the front of the array
+        num = Math.floor(num / 10);                 // Divide the number by 10 and floor it, thus changing the smallest whole digit
+    }
+    for(let i = 0; i < numReversed.length; i++){    // I-loop to iterate through the container array
+        reversedNum += (numReversed[i] * 10**i);    // Update the reversed number container
+    }
+    
+    return reversedNum;                             // Return the reversed number
+}
+
 console.log(reverseNumber(371)); 	// 173
 console.log(reverseNumber(123)); 	// 321
 console.log(reverseNumber(12)); 	// 21
@@ -142,19 +169,35 @@ console.log(reverseNumber(111)); 	// 111
 Write a function named doubleOrTriple() which takes an array of numbers as argument and a boolean value. It will return
 the array elements doubled if true or tripled if the boolean value is false.​
 */
+const doubleOrTriple = (arr, bool) => {        // Arrow function, taking an array and a boolean as arguments
+    if(bool){                                  // If statement to check boolean
+        return arr.map(num => num * 2);        // Return array with values doubled
+    }
+    else return arr.map(num => num * 3);       // Else return array with values tripled
+}
+
 console.log(doubleOrTriple([1, 5, 10], true)); 	// [2, 10, 20]
 console.log(doubleOrTriple([3, 7, 2], false)); 	// [9, 21, 6]
 console.log(doubleOrTriple([-1, -2], true)); 	// [-2, -4]
-console.log(doubleOrTriple([0], false)); 	// [0]
+console.log(doubleOrTriple([0], false)); 	    // [0]
 console.log(doubleOrTriple([-1, 0, 1], true)); 	// [-2, 0, 2]
 
 // Task 7
 /*
 Write a function named splitString() which takes a string and a number arguments and returns the string back split by
-the given number. 
+the given number.
+
 Note:
-Return empty string if the string shorter than splitting number or the string length is not divisible by the given number.
+Return empty string if the string is shorter than splitting number or the string length is not divisible by the given number.
 */
+const splitString = (str, num) => {                             // Arrow function which takes a number and a string as arguments
+    if(num > str.length || str.length % num !== 0) return '';   // General checks to stay within guidelines
+
+    let strArr = str.split('');                                 // Split the string into an array by nothing
+    strArr.splice(num, 0, ' ');                                 // Insert a space, corresponding with the given number
+    return strArr.join('');                                     // Return the array, with newly added space, joined by nothing
+}
+
 console.log(splitString("JavaScript", 5)); 	// "JavaS cript"
 console.log(splitString("Java", 2)); 		// "Ja va"
 console.log(splitString("Automation", 3)); 	// ""
