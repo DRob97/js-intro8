@@ -1,18 +1,17 @@
-const sumDigitsDouble = (str) => {
-    let nums = 0;
-    
-    for(let i = 0; i < str.length; i++){
-        if(str.charCodeAt(i) <= 57 && str.charCodeAt(i) >= 48){
-            nums += parseInt(str[i]);
-        }
-    }
+const findLongestWord = (str) => {
+    if(!str.trim()) return '';
 
-    if(nums === 0) return -1;
-    else return nums * 2;
+    const splitString = str.split(' ');
+    // console.log(splitString);
+    const index = splitString.reduce((longest, current) => current.length > longest.length ? longest = current : longest, '');
+    
+    return index;
 }
 
-console.log(sumDigitsDouble("Javascript")); 	// -1
-console.log(sumDigitsDouble("23abc45"));        // 28
-console.log(sumDigitsDouble("Hi-23")); 	        // 10
-console.log(sumDigitsDouble("ab12")); 	        // 6
-console.log(sumDigitsDouble("n0numh3r3")); 	    // 12
+console.log('Task 5:');
+
+console.log(findLongestWord("The quick brown fox jumped over the lazy dog")); 	// "jumped"
+console.log(findLongestWord("This is a sample string for testing")); 		    // "testing"
+console.log(findLongestWord("One two ten")); 				                    // "One"
+console.log(findLongestWord("")); 					                            // ""
+console.log(findLongestWord("     ")); 					                        // ""
