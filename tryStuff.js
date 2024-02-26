@@ -1,17 +1,13 @@
-const findLongestWord = (str) => {
-    if(!str.trim()) return '';
+const toCamelCase = (str) => {
+    const array = str.trim().split(' ');
+    if(array.length === 1) return array.join('');
 
-    const splitString = str.split(' ');
-    // console.log(splitString);
-    const index = splitString.reduce((longest, current) => current.length > longest.length ? longest = current : longest, '');
-    
-    return index;
+
 }
 
-console.log('Task 5:');
-
-console.log(findLongestWord("The quick brown fox jumped over the lazy dog")); 	// "jumped"
-console.log(findLongestWord("This is a sample string for testing")); 		    // "testing"
-console.log(findLongestWord("One two ten")); 				                    // "One"
-console.log(findLongestWord("")); 					                            // ""
-console.log(findLongestWord("     ")); 					                        // ""
+console.log('\nTask 01');
+console.log(toCamelCase("first name")); 	        //"firstName"
+console.log(toCamelCase("last     name")); 	        //"lastName"
+console.log(toCamelCase("   ZIP CODE")); 	        //"zipCode"
+console.log(toCamelCase("I Learn Java Script"));  	// "iLearnJavaScript"
+console.log(toCamelCase("helloWorld"));	            // "helloWorld"
