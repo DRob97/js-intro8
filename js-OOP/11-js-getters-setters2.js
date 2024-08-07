@@ -77,3 +77,30 @@ console.log(iPhone15.getBrand());
 // iPhone15.#brand = 'Samsung';    // Also not allowed
 iPhone15.setBrand('Samsung');
 console.log(iPhone15.getBrand());
+
+class SocialSecurityCard{
+    #ssn = '123-45-6789'
+    constructor(name, gender, height){
+        this.name = name
+        this.gender = gender
+        this.height = height
+    }
+
+    getSSN(){
+        return this.#ssn
+    }
+
+    setSSN(newNumber){
+        this.#ssn = newNumber
+    }
+
+}
+
+const zaid = new SocialSecurityCard('Zaid', 'Male', '170cm');
+
+console.log(zaid.gender)
+console.log(zaid.getSSN())
+zaid.setSSN('234-56-7890')
+console.log(zaid.getSSN())
+
+const suzanne = new SocialSecurityCard('Suzanne', 'Female', '156cm');
